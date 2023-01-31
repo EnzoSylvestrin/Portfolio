@@ -11,7 +11,7 @@ export const ItemUl = ({ children, state }: { children: string, state: boolean }
         <li className={
             clsx("text-lg text-gray-200 cursor-pointer tracking-wider duration-250 transition-all mt-2 " +
                 "after:block after:h-0 after:border-b-[2px] after:border-b-cyan-500 after:mr-1 after:scale-0 after:transition-transform after:duration-[320ms] after:ease-in-out " +
-                "hover:after:scale-100 hover:after:h-auto", state ? 'opacity-0' : 'opacity-100')
+                "hover:after:scale-100 hover:after:h-auto", state ? 'opacity-100' : 'opacity-0')
         }>
             {children}
         </li>
@@ -30,13 +30,13 @@ export const ThemeComponent = ({ dark, ...rest }: LiHTMLAttributes<HTMLLIElement
 
 export const MenuComponent = ({ state, ...rest }: HTMLAttributes<HTMLDivElement> & { state: boolean }) => {
     return (
-        <div className="absolute top right-[5%] transition-all duration-500 ease" {...rest}>
+        <div className="absolute top right-[5%] transition-all duration-500 ease md:hidden" {...rest}>
             {
                 state
                     ?
-                    <AiOutlineMenu size={20} color={'#06B6D4'} />
-                    :
                     <HiXMark size={20} color={'#06B6D4'} />
+                    :
+                    <AiOutlineMenu size={20} color={'#06B6D4'} />
             }
         </div>
     );
