@@ -25,5 +25,6 @@ module.exports = {
       lg: '900px'
     }
   },
+  darkMode: 'class',
   plugins: [],
 }
