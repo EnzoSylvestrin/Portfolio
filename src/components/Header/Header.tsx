@@ -22,7 +22,7 @@ const Header = ({ setTheme }: any & { setTheme: Dispatch<SetStateAction<"" | "da
     return (
         <header id="#top">
             <nav className="w-full fixed bg-neutral-800 border-b-cyan-400 border-b-[1px] px-4 flex items-center justify-center h-[12vh] min-h-[4rem] md:justify-between">
-                <a href="#top" className="text-center text-transparent text-2xl text-cyan-500 md:text-left">Enzo</a>
+                <a href="#top" className="text-center text-transparent text-2xl bg-clip-text md:text-left" style={{ backgroundImage: 'linear-gradient(to left, var(--first), var(--second), var(--third))' }}>Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={
                     clsx("bg-gray-900 fixed top-[12vh] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 shadow-2xl md:static md:flex-row md:w-full md:border-0 md:h-auto md:bg-transparent md:duration-[0ms]", State ? "w-[180px] border-l-cyan-400 border-l-[1px]" : "w-0")

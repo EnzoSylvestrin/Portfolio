@@ -11,7 +11,8 @@ module.exports = {
       lg: 20,
       xl: 24,
       xxl: 28,
-      '2xl': 32
+      '2xl': '2rem',
+      xlg: '2.5rem',
     },
     extend: {
       fontFamily: {
@@ -26,5 +27,12 @@ module.exports = {
     }
   },
   darkMode: 'class',
+  extend: {
+    colors: {
+      "purple-300": '#AF40FF',
+      "blue-500": '#5B42F3',
+      "cyan-400": '#00DDEB',
+    }
+  },
   plugins: [],
 }
