@@ -6,14 +6,14 @@ import { BiMoon, BiSun } from 'react-icons/bi';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { HiXMark } from 'react-icons/hi2';
 
-export const ItemUl = ({ children, state }: { children: string, state: boolean }) => {
+export const ItemUl = ({ children, state, link }: { children: string, state: boolean, link: string }) => {
     return (
         <li className={
             clsx("text-lg text-gray-200 cursor-pointer tracking-wider duration-250 transition-all mt-2 md:opacity-100 " +
                 "after:block after:h-0 after:border-b-[2px] after:border-b-cyan-500 after:mr-1 after:scale-0 after:transition-transform after:duration-[320ms] after:ease-in-out " +
                 "hover:after:scale-100 hover:after:h-auto", state ? 'opacity-100' : 'opacity-0')
         }>
-            {children}
+            <a href={`#${link}`}>{children}</a>
         </li>
     );
 }

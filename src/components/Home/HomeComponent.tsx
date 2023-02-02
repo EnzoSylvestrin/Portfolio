@@ -3,11 +3,24 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import Typewriter from "typewriter-effect";
 
 import Button from "../Button/Button";
+import ColorPicker from "../ColorPicker/ColorPicker";
 
 const HomeComponent = () => {
     return (
         <>
-            <div className="flex items-center justify-center pt-[12vh] p-4 h-full sm:px-12">
+            <div className="flex items-center justify-center pt-[12vh] p-4 h-full sm:px-12" id='home'>
+                <ColorPicker
+                    className='absolute top-[20vh] left-12'
+                    initialValue='#AF40FF'
+                />
+                <ColorPicker
+                    className='absolute top-[20vh] left-20'
+                    initialValue='#5B42F3'
+                />
+                <ColorPicker
+                    className='absolute top-[20vh] left-28'
+                    initialValue='#00DDEB'
+                />
                 <div className="flex items-center flex-col h-full w-full justify-center md:w-[50%] md:items-start">
                     <h1 className="text-xxl mb-6 text-center dark:text-white md:text-start sm:text-xlg">Seja bem vindo!<br />meu nome é Enzo</h1>
 
@@ -21,7 +34,7 @@ const HomeComponent = () => {
                         }}
                     />
 
-                    <Button text="Encontre me" styles="mt-8 text-lg md:text-xl" />
+                    <Button text="Encontre-me" styles="mt-8 text-lg md:text-xl" />
                 </div>
                 <div className="w-[50%] items-center justify-center hidden md:flex">
                     <Player

@@ -27,13 +27,13 @@ const Header = ({ setTheme }: any & { setTheme: Dispatch<SetStateAction<"" | "da
                 <ul className={
                     clsx("bg-gray-900 fixed top-[12vh] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 md:static md:flex-row md:w-full md:border-0 md:h-auto md:bg-transparent md:duration-[0ms]", State ? "w-[180px] border-l-cyan-400 border-l-[1px]" : "w-0")
                 }>
-                    <ItemUl state={State}>
+                    <ItemUl state={State} link="home">
                         Home
                     </ItemUl>
-                    <ItemUl state={State}>
+                    <ItemUl state={State} link="Projetos">
                         Projetos
                     </ItemUl>
-                    <ItemUl state={State}>
+                    <ItemUl state={State} link="Contato">
                         Contato
                     </ItemUl>
                     <div className={
