@@ -25,6 +25,10 @@ a {
   text-decoration: none;
 }
 
+.gradient-text {
+  background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

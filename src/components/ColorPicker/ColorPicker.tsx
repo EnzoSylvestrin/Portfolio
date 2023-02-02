@@ -1,23 +1,49 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { HexColorPicker } from 'react-colorful';
 
 type ColorPickerProps = {
+    id: 1 | 2 | 3;
     initialValue: string,
-    className: string
+    className: string,
+    active: 0 | 1 | 2 | 3,
+    setActive: Dispatch<SetStateAction<0 | 1 | 2 | 3>>
 };
 
-const ColorPicker = ({ initialValue, className }: ColorPickerProps) => {
+const ColorPicker = ({ id, initialValue, className, active, setActive }: ColorPickerProps) => {
     const [color, setColor] = useState(initialValue);
-    const [showPicker, setShowPicker] = useState(false);
+
+    let showPicker = active === id;
 
     const handleChange = (newColor: string) => {
         setColor(newColor);
+        document.body.style.setProperty(getProperty(), newColor);
     };
+
+    const getProperty = (): string => {
+        if (id == 1) {
+            return '--first';
+        }
+        else if (id == 2) {
+            return '--second';
+        }
+        else {
+            return '--third';
+        }
+    }
+
+    const VerifyActive = () => {
+        if (active === id) {
+            setActive(0);
+        }
+        else {
+            setActive(id);
+        }
+    }
 
     return (
         <div className={className}>
-            <div onClick={() => setShowPicker(!showPicker)} style={{ color: color }}>
-                <div className='rounded-[50%] w-6 h-6' style={{ backgroundColor: color }}></div>
+            <div onClick={VerifyActive} style={{ color: color }}>
+                <div className='rounded-[50%] w-5 h-5' style={{ backgroundColor: color }}></div>
             </div>
             {showPicker && (
                 <HexColorPicker style={{ position: "absolute" }} color={color} onChange={handleChange} />
