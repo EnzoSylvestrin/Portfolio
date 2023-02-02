@@ -2,8 +2,9 @@ import { Dispatch, SetStateAction, useState } from 'react';
 
 import { AiOutlineGithub } from 'react-icons/ai';
 
-import { ItemUl, MenuComponent, ThemeComponent } from './HeaderStyled';
+import { ItemUl, LinearGradientIcon, MenuComponent, ThemeComponent } from './HeaderStyled';
 import clsx from 'clsx';
+import { url } from 'inspector';
 
 const Header = ({ setTheme }: any & { setTheme: Dispatch<SetStateAction<"" | "dark">> }) => {
 
@@ -21,8 +22,8 @@ const Header = ({ setTheme }: any & { setTheme: Dispatch<SetStateAction<"" | "da
 
     return (
         <header id="#top">
-            <nav className="w-full fixed z-50 bg-neutral-800 border-b-cyan-400 border-b-[1px] px-4 flex items-center justify-center h-[12vh] min-h-[4rem] md:justify-between">
-                <a href="#top" className="text-center text-transparent ml-8 text-2xl bg-clip-text md:text-left gradient-text">Enzo</a>
+            <nav className="w-full fixed z-50 bg-neutral-800 px-12 flex items-center justify-center h-[12vh] min-h-[4rem] md:justify-between">
+                <a href="#top" className="text-center text-transparent text-2xl bg-clip-text gradient-text md:text-left">Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={
                     clsx("bg-gray-900 fixed top-[12vh] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 md:static md:flex-row md:w-full md:border-0 md:h-auto md:bg-transparent md:duration-[0ms]", State ? "w-[180px] border-l-cyan-400 border-l-[1px]" : "w-0")
@@ -43,12 +44,15 @@ const Header = ({ setTheme }: any & { setTheme: Dispatch<SetStateAction<"" | "da
                         <li className="text-xxl text-gray-200 hover:text-gray-400"><AiOutlineGithub /></li>
                     </div>
                 </ul>
-                <ul className="hidden items-center justify-center gap-4 mr-4 text-gray-200 md:flex">
+                <ul className="hidden items-center justify-center gap-2 mr-4 text-gray-200 md:flex">
                     <ThemeComponent dark={DarkMode} onClick={ToggleMode} />
-                    <li className="text-xxl hover:text-gray-400"><AiOutlineGithub /></li>
+                    <li className="text-xxl hover:shadow-lg">
+                        <LinearGradientIcon Icon={<AiOutlineGithub style={{ fill: "url(#header-shape-gradient)" }} />} />
+                    </li>
                 </ul>
+                <div className="w-full h-[2px] border-gradient absolute left-0 bottom-0"></div>
             </nav>
-        </header >
+        </header>
     )
 }
 

@@ -27,6 +27,14 @@ a {
 
 .gradient-text {
   background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
+  color: transparent;
+}
+
+.border-gradient {
+  border-bottom: 1px solid transparent;
+  background-origin: border-box;
+  background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
+  background-clip: context-box, border-box;
 }
 
 @tailwind base;

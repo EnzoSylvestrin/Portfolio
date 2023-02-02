@@ -17,8 +17,8 @@ const HomeComponent = () => {
                             strings: ['Desenvolvedor', 'FullStack', 'Junior', 'Freenlancer', 'Gamer'],
                             autoStart: true,
                             loop: true,
-                            cursorClassName: 'text-xlg bg-clip-text text-transparent gradient-text',
-                            wrapperClassName: 'text-xlg bg-clip-text text-transparent gradient-text'
+                            cursorClassName: 'text-xlg bg-clip-text gradient-text',
+                            wrapperClassName: 'text-xlg bg-clip-text gradient-text'
                         }}
                     />
 

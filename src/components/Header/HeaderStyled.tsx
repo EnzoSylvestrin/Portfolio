@@ -1,4 +1,4 @@
-import { HTMLAttributes, LiHTMLAttributes } from 'react';
+import { HTMLAttributes, LiHTMLAttributes, ReactNode } from 'react';
 
 import clsx from 'clsx';
 
@@ -39,5 +39,18 @@ export const MenuComponent = ({ state, ...rest }: HTMLAttributes<HTMLDivElement>
                     <AiOutlineMenu size={20} color={'#06B6D4'} />
             }
         </div>
+    );
+}
+
+export const LinearGradientIcon = ({ Icon }: { Icon: ReactNode }) => {
+    return (
+        <svg width="1em" height="1em">
+            <linearGradient id="header-shape-gradient" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="var(--first)" />
+                <stop offset="50%" stopColor="var(--second)" />
+                <stop offset="100%" stopColor="var(--third)" />
+            </linearGradient>
+            {Icon}
+        </svg>
     );
 }
