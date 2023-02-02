@@ -4,5 +4,5 @@ button {
 }
 
 button:hover span {
-    background: none;
+    background: none !important;
 }
