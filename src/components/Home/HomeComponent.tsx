@@ -8,7 +8,7 @@ import ContainerColors from '../ColorPicker/ContainerColors';
 const HomeComponent = () => {
     return (
         <>
-            <div className="flex items-center justify-center pt-[12vh] p-4 h-full sm:px-12" id='home'>
+            <div className="flex items-center justify-center pt-[12vh] p-4 h-full sm:px-12 relative" id='home'>
                 <div className="flex items-center flex-col h-full w-full justify-center md:w-[50%] md:items-start">
                     <h1 className="text-xxl mb-6 text-center dark:text-white md:text-start sm:text-xlg">Seja bem vindo!<br />meu nome é Enzo</h1>
                     <ContainerColors />
@@ -29,7 +29,7 @@ const HomeComponent = () => {
                         autoplay
                         loop
                         src="https://assets3.lottiefiles.com/packages/lf20_v9riyrep.json"
-                        style={{ height: 450, width: 450 }}
+                        style={{ height: 420, width: 420 }}
                     >
                     </Player>
                 </div>

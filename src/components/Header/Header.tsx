@@ -40,14 +40,14 @@ const Header = ({ setTheme }: any & { setTheme: Dispatch<SetStateAction<"" | "da
                     <div className={
                         clsx('flex items-center justify-center gap-6 absolute right-0 bottom-5 w-full md:hidden', State ? 'visible' : 'invisible')
                     }>
-                        <ThemeComponent dark={DarkMode} onClick={ToggleMode} />
-                        <li className="text-xxl text-gray-200 hover:text-gray-400"><AiOutlineGithub /></li>
+                        <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={"0"} />
+                        <li className="text-xxl"><LinearGradientIcon Icon={AiOutlineGithub} id={"0"} /></li>
                     </div>
                 </ul>
                 <ul className="hidden items-center justify-center gap-2 mr-4 text-gray-200 md:flex">
-                    <ThemeComponent dark={DarkMode} onClick={ToggleMode} />
+                    <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={'2'} />
                     <li className="text-xxl hover:shadow-lg">
-                        <LinearGradientIcon Icon={<AiOutlineGithub style={{ fill: "url(#header-shape-gradient)" }} />} />
+                        <LinearGradientIcon Icon={AiOutlineGithub} id={"2"} />
                     </li>
                 </ul>
                 <div className="w-full h-[2px] border-gradient absolute left-0 bottom-0"></div>

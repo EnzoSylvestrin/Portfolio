@@ -37,6 +37,13 @@ a {
   background-clip: context-box, border-box;
 }
 
+.item-ul::after {
+  border-bottom: 2px solid transparent;
+  background-origin: border-box;
+  background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
+  background-clip: context-box, border-box;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
