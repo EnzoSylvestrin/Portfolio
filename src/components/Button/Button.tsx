@@ -10,7 +10,7 @@ const Button = ({ text, styles, ...rest }: ButtonHTMLAttributes<HTMLButtonElemen
     return (
         <button className={clsx(
             "flex border-0 rounded-lg text-black p-[3px] select-none whitespace-nowrap cursor-pointer" +
-            "transition-all duration-300 items-center justify-center dark:text-white", styles
+            "transition-all duration-300 items-center justify-center dark:text-white hover:scale-105", styles
         )}
             {...rest}
         >

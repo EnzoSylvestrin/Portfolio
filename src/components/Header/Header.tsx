@@ -28,7 +28,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
     return (
         <header id="#top">
             <nav className="w-full fixed z-50 bg-neutral-800 px-12 flex items-center justify-center h-[12vh] min-h-[4rem] md:justify-between">
-                <a href="#top" className="text-center text-transparent text-2xl bg-clip-text gradient-text md:text-left">Enzo</a>
+                <a href="#top" className="text-center text-transparent text-2xl bg-clip-text gradient-text transition-all duration-300 hover:scale-105 md:text-left">Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={
                     clsx("bg-gray-900 fixed top-[12vh] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 md:static md:flex-row md:w-full md:border-0 md:h-auto md:bg-transparent md:duration-[0ms]", State ? "w-[180px] border-l-cyan-400 border-l-[1px]" : "w-0")
@@ -36,14 +36,14 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                     <ItemUl state={State} link="home">
                         Home
                     </ItemUl>
+                    <ItemUl state={State} link="Sobre">
+                        Sobre
+                    </ItemUl>
                     <ItemUl state={State} link="Projetos">
                         Projetos
                     </ItemUl>
                     <ItemUl state={State} link="Contato">
                         Contato
-                    </ItemUl>
-                    <ItemUl state={State} link="Contato">
-                        Certificados
                     </ItemUl>
                     <div className={
                         clsx('flex items-center justify-center gap-6 absolute right-0 bottom-5 w-full md:hidden', State ? 'visible' : 'invisible')
@@ -54,7 +54,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                 </ul>
                 <ul className="hidden items-center justify-center gap-2 mr-4 text-gray-200 md:flex">
                     <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={'2'} />
-                    <li className="text-xxl hover:shadow-lg">
+                    <li className="text-xxl transition-all duration-300 hover:scale-110">
                         <LinearGradientIcon Icon={AiOutlineGithub} id={"2"} />
                     </li>
                 </ul>

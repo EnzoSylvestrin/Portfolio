@@ -10,7 +10,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Work Sans', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', sans-serif;;
+  font-family: 'Work Sans', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
 }
 
 html,

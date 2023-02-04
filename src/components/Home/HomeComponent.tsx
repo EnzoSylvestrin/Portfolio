@@ -11,7 +11,7 @@ const HomeComponent = () => {
         <>
             <div className="h-screen w-full flex items-center justify-center pt-[12vh] p-4 sm:px-12 relative" id='home'>
                 <div className="flex items-center flex-col h-full w-full justify-center md:w-[50%] md:items-start">
-                    <Heading size='md' className="mb-6 text-center md:text-start sm:text-xlg">
+                    <Heading asChild size='md' className="mb-6 text-center md:text-start sm:text-xlg">
                         <h1>
                             Seja bem vindo!<br />
                             meu nome é Enzo<br />
