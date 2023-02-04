@@ -1,24 +1,29 @@
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 import { AiOutlineGithub } from 'react-icons/ai';
 
 import { ItemUl, LinearGradientIcon, MenuComponent, ThemeComponent } from './HeaderStyled';
 import clsx from 'clsx';
-import { url } from 'inspector';
 
-const Header = ({ setTheme }: any & { setTheme: Dispatch<SetStateAction<"" | "dark">> }) => {
+const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dark">> }) => {
 
     const [DarkMode, setDarkMode] = useState<boolean>(true);
     const [State, setState] = useState<boolean>(false);
 
     const ToggleMode = () => {
         setDarkMode(!DarkMode);
-        setTheme(DarkMode ? '' : 'dark');
+        setTheme(DarkMode ? 'light' : 'dark');
+        localStorage.setItem('theme', DarkMode ? 'light' : 'dark');
     }
 
     const ToggleState = () => {
         setState(!State);
     }
+
+    useEffect(() => {
+        let theme: string | null = localStorage.getItem('theme');
+        setDarkMode(theme == null ? true : theme == 'dark' ? true : false);
+    }, []);
 
     return (
         <header id="#top">

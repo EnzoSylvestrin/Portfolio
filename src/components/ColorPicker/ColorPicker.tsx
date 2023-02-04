@@ -17,6 +17,7 @@ const ColorPicker = ({ id, initialValue, className, active, setActive }: ColorPi
     const handleChange = (newColor: string) => {
         setColor(newColor);
         document.body.style.setProperty(getProperty(), newColor);
+        localStorage.setItem(id.toString(), newColor);
     };
 
     const getProperty = (): string => {
