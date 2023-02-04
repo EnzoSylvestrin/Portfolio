@@ -4,6 +4,7 @@ import clsx from "clsx";
 import Header from "@/components/sections/Header/Header";
 import HomeComponent from "@/components/sections/Home/HomeComponent";
 import About from "@/components/sections/About/About";
+import Skills from "@/components/sections/Skills/Skills";
 
 export default function Home() {
 
@@ -29,6 +30,7 @@ export default function Home() {
       <Header setTheme={setTheme} />
       <HomeComponent />
       <About />
+      <Skills />
     </section>
   )
 }

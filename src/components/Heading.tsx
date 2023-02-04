@@ -6,7 +6,7 @@ export interface HeadingProps {
     size?: 'sm' | 'md' | 'lg' | 'xl';
     children: ReactNode;
     asChild?: boolean;
-    className: string;
+    className?: string;
 }
 
 export default function Heading({ size = 'md', children, asChild, className }: HeadingProps) {

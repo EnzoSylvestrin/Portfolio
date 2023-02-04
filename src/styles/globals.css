@@ -38,6 +38,10 @@ a {
   background-clip: context-box, border-box;
 }
 
+::selection {
+  color: #00DDEB;
+}
+
 ::-webkit-scrollbar {
   width: 7px;
 }
