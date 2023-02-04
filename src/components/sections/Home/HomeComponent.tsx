@@ -2,14 +2,14 @@ import { Player } from '@lottiefiles/react-lottie-player';
 
 import Typewriter from "typewriter-effect";
 
-import Button from "../Button/Button";
-import ContainerColors from '../ColorPicker/ContainerColors';
-import Heading from '../Heading';
+import Button from "../../Button/Button";
+import ContainerColors from '../../ColorPicker/ContainerColors';
+import Heading from '../../Heading';
 
 const HomeComponent = () => {
     return (
         <>
-            <div className="h-screen w-full flex items-center justify-center pt-[12vh] p-4 sm:px-12 relative" id='home'>
+            <div className="h-screen w-full flex items-center justify-center pt-[12vh] p-0 xs:p-4 sm:px-12 relative" id='home'>
                 <div className="flex items-center flex-col h-full w-full justify-center md:w-[50%] md:items-start">
                     <Heading asChild size='md' className="mb-6 text-center md:text-start sm:text-xlg">
                         <h1>

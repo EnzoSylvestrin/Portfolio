@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import '@/styles/Components.css';
 import '../components/Button/Button.css';
 import type { AppProps } from 'next/app';
 

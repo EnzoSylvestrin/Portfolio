@@ -1,0 +1,24 @@
+.item-ul::after {
+    border-bottom: 2px solid transparent;
+    background-origin: border-box;
+    background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
+    background-clip: context-box, border-box;
+}
+ 
+.right-calc {
+    left: calc(50% + 30px);
+}
+
+.left-calc {
+    left: calc(50% - 30px);
+}
+
+@media (min-width: 768px) {
+    .left-calc {
+        left: 3rem;
+    }
+
+    .right-calc {
+        left: 7rem;
+    }
+}

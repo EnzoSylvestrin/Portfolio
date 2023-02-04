@@ -31,7 +31,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                 <a href="#top" className="text-center text-transparent text-2xl bg-clip-text gradient-text transition-all duration-300 hover:scale-105 md:text-left">Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={
-                    clsx("bg-gray-900 fixed top-[12vh] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 md:static md:flex-row md:w-full md:border-0 md:h-auto md:bg-transparent md:duration-[0ms]", State ? "w-[180px] border-l-cyan-400 border-l-[1px]" : "w-0")
+                    clsx("bg-gray-900 fixed top-[12vh] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 md:static md:flex-row md:w-full md:h-auto md:bg-transparent md:duration-[0ms]", State ? "w-[180px]" : "w-0")
                 }>
                     <ItemUl state={State} link="home">
                         Home
@@ -51,6 +51,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                         <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={"0"} />
                         <li className="text-xxl"><LinearGradientIcon Icon={AiOutlineGithub} id={"0"} /></li>
                     </div>
+                    <div className="w-[2px] h-full border-gradient absolute left-0 bottom-0 md:hidden"></div>
                 </ul>
                 <ul className="hidden items-center justify-center gap-2 mr-4 text-gray-200 md:flex">
                     <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={'2'} />

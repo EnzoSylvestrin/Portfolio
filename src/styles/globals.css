@@ -12,6 +12,7 @@
   margin: 0;
   font-family: 'Work Sans', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 12vh;
 }
 
 html,
@@ -32,14 +33,6 @@ a {
 }
 
 .border-gradient {
-  border-bottom: 1px solid transparent;
-  background-origin: border-box;
-  background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
-  background-clip: context-box, border-box;
-}
-
-.item-ul::after {
-  border-bottom: 2px solid transparent;
   background-origin: border-box;
   background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
   background-clip: context-box, border-box;

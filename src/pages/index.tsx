@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
-import Header from "@/components/Header/Header";
-import HomeComponent from "@/components/Home/HomeComponent";
-import About from "@/components/About/About";
+import Header from "@/components/sections/Header/Header";
+import HomeComponent from "@/components/sections/Home/HomeComponent";
+import About from "@/components/sections/About/About";
 
 export default function Home() {
 
