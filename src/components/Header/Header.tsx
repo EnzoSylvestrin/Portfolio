@@ -42,6 +42,9 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                     <ItemUl state={State} link="Contato">
                         Contato
                     </ItemUl>
+                    <ItemUl state={State} link="Contato">
+                        Certificados
+                    </ItemUl>
                     <div className={
                         clsx('flex items-center justify-center gap-6 absolute right-0 bottom-5 w-full md:hidden', State ? 'visible' : 'invisible')
                     }>

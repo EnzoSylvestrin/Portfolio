@@ -27,7 +27,7 @@ a {
 
 .gradient-text {
   background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
-  color: transparent;
+  color: transparent !important;
 }
 
 .border-gradient {
@@ -42,6 +42,39 @@ a {
   background-origin: border-box;
   background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
   background-clip: context-box, border-box;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222121;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e8e8e8;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e8e8e8;
+}
+
+::-webkit-input-placeholder {
+  color: #e7e7e7e7;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #e7e7e7e7;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #e7e7e7e7;  
+}
+
+:-ms-input-placeholder {  
+  color: #e7e7e7e7;  
 }
 
 @tailwind base;

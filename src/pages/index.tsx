@@ -3,6 +3,7 @@ import clsx from "clsx";
 
 import Header from "@/components/Header/Header";
 import HomeComponent from "@/components/Home/HomeComponent";
+import About from "@/components/About/About";
 
 export default function Home() {
 
@@ -24,9 +25,10 @@ export default function Home() {
   }, []);
 
   return (
-    <section className={clsx("w-screen h-screen transition-all duration-300", Theme == 'light' ? 'bg-gray-200' : 'dark bg-zinc-900')}>
+    <section className={clsx("transition-all duration-300", Theme == 'light' ? 'bg-gray-200' : 'dark bg-zinc-900')}>
       <Header setTheme={setTheme} />
       <HomeComponent />
+      <About />
     </section>
   )
 }

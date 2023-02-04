@@ -9,7 +9,7 @@ type ButtonProps = {
 const Button = ({ text, styles, ...rest }: ButtonHTMLAttributes<HTMLButtonElement> & ButtonProps) => {
     return (
         <button className={clsx(
-            "flex border-0 rounded-lg text-black text-md p-[3px] select-none whitespace-nowrap cursor-pointer" +
+            "flex border-0 rounded-lg text-black p-[3px] select-none whitespace-nowrap cursor-pointer" +
             "transition-all duration-300 items-center justify-center dark:text-white", styles
         )}
             {...rest}

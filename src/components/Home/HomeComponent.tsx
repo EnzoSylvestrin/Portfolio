@@ -4,13 +4,19 @@ import Typewriter from "typewriter-effect";
 
 import Button from "../Button/Button";
 import ContainerColors from '../ColorPicker/ContainerColors';
+import Heading from '../Heading';
 
 const HomeComponent = () => {
     return (
         <>
-            <div className="flex items-center justify-center pt-[12vh] p-4 h-full sm:px-12 relative" id='home'>
+            <div className="h-screen w-full flex items-center justify-center pt-[12vh] p-4 sm:px-12 relative" id='home'>
                 <div className="flex items-center flex-col h-full w-full justify-center md:w-[50%] md:items-start">
-                    <h1 className="text-xxl mb-6 text-center dark:text-white md:text-start sm:text-xlg">Seja bem vindo!<br />meu nome é Enzo</h1>
+                    <Heading size='md' className="mb-6 text-center md:text-start sm:text-xlg">
+                        <h1>
+                            Seja bem vindo!<br />
+                            meu nome é Enzo<br />
+                        </h1>
+                    </Heading>
                     <ContainerColors />
                     <Typewriter
                         options={{
