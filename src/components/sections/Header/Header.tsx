@@ -58,7 +58,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                     </div>
                     <div className="w-[2px] h-full border-gradient absolute left-0 bottom-0 md:hidden"></div>
                 </ul>
-                <ul className="hidden items-center justify-center gap-2 mr-4 text-gray-200 md:flex mb-1">
+                <ul className="hidden items-center justify-center gap-2 text-gray-200 md:flex mb-1">
                     <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={'2'} />
                     <li className="text-xxl transition-all duration-300 hover:scale-110">
                         <LinearGradientIcon Icon={AiOutlineGithub} size={30} id={"2"} />
