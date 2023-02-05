@@ -18,7 +18,7 @@ import { IconType } from "react-icons/lib";
 
 const Skills = () => {
 
-    const [progress, setProgress] = useState<number>(0);
+    const [progress, setProgress] = useState<number>(100);
 
     const maxProgress = 100;
     const maxTime = 24;
@@ -74,12 +74,12 @@ const Skills = () => {
                 <Heading className="gradient-text bg-clip-text mb-3" size="xl">Skills</Heading>
                 <div className="flex flex-col flex-nowrap w-full sm:flex-row">
                     <div className="w-[100%] flex flex-col items-center justify-center my-3 sm:my-0 sm:w-[30%]">
-                        <Heading size="lg" className="gradient-text bg-clip-text" asChild={true}>
-                            <h1 ref={Title}>Nome da linguagem</h1>
+                        <Heading size="lg" className="gradient-text bg-clip-text text-center" asChild={true}>
+                            <h1 ref={Title}>Skill</h1>
                         </Heading>
                         <ProgressBar className="w-[90%] transition-all duration-300 m-3" bgColor="linear-gradient(to right, var(--first), var(--second), var(--third))" baseBgColor="var(--bgColor)" maxCompleted={maxProgress} completed={progress} />
                         <Text size="lg" className="text-center" asChild={true}>
-                            <p ref={Description}>Descricao</p>
+                            <p ref={Description}>Passe o mouse ou clique em cima de uma skill para ver o tempo</p>
                         </Text>
                     </div>
                     <div className="w-[100%] grid grid-cols-1 justify-center align-center p-2 gap-6 mt-6 xs:grid-cols-2 sm:grid-cols-2 sm:p-2 sm:w-[70%] md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
