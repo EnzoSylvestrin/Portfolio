@@ -15,7 +15,10 @@ module.exports = {
       },
       fontFamily: {
         work: 'Work Sans, sans-serif'
-      }
+      },
+      screens: {
+        xs: '370px',
+      },
     },
     fontSize: {
       sm: 16,
@@ -26,14 +29,8 @@ module.exports = {
       '2xl': '2rem',
       xlg: '2.5rem',
     },
-    breakpoints: {
-      xs: '370px',
-      sm: '500px',
-      md: '768px',
-      lg: '900px',
-      xl: '1000px'
-    }
   },
   darkMode: 'class',
+ 
   plugins: [],
 }

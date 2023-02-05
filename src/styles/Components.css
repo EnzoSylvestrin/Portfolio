@@ -41,7 +41,7 @@
     background-size: 300%;
     animation: animaBorda 10s linear alternate infinite;
     z-index: -1;
-    border-radius: 6px;
+    border-radius: 50%;
 }
 
 /* .Card-Gradient:hover.Card-Gradient::before {
