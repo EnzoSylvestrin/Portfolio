@@ -13,6 +13,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
     const ToggleMode = () => {
         setDarkMode(!DarkMode);
         setTheme(DarkMode ? 'light' : 'dark');
+        document.body.style.setProperty('--bgColor', DarkMode ? 'rgb(229 231 235)' : 'rgb(24 24 27)');
         localStorage.setItem('theme', DarkMode ? 'light' : 'dark');
     }
 
@@ -23,6 +24,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
     useEffect(() => {
         let theme: string | null = localStorage.getItem('theme');
         setDarkMode(theme == null ? true : theme == 'dark' ? true : false);
+        document.body.style.setProperty('--bgColor', theme != "dark" ? 'rgb(229 231 235)' : 'rgb(24 24 27)');
     }, []);
 
     return (
