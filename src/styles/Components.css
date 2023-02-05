@@ -22,3 +22,41 @@
         left: 7rem;
     }
 }
+
+.Card-Gradient {
+    background: var(--first);
+}
+
+.Card-Gradient::after {
+    filter: blur(4px);
+}
+
+.Card-Gradient::before,
+.Card-Gradient::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    background: linear-gradient(45deg, var(--first), var(--second), var(--third), var(--first), var(--second), var(--third));
+    background-size: 300%;
+    animation: animaBorda 10s linear alternate infinite;
+    z-index: -1;
+    border-radius: 6px;
+}
+
+/* .Card-Gradient:hover.Card-Gradient::before {
+    animation: animaBorda 5s linear alternate infinite;
+}
+
+.Card-Gradient:hover.Card-Gradient::after {
+    animation: animaBorda 5s linear alternate infinite;
+} */
+
+@keyframes animaBorda {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: 300%;
+    }
+}

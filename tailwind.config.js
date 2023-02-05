@@ -30,7 +30,8 @@ module.exports = {
       xs: '370px',
       sm: '500px',
       md: '768px',
-      lg: '900px'
+      lg: '900px',
+      xl: '1000px'
     }
   },
   darkMode: 'class',
