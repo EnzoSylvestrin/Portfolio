@@ -74,7 +74,7 @@ const Skills = () => {
                 <Heading className="gradient-text bg-clip-text mb-3" size="xl">Skills</Heading>
                 <div className="flex flex-col flex-nowrap w-full sm:flex-row">
                     <div className="w-[100%] flex flex-col items-center justify-center my-3 sm:my-0 sm:w-[30%]">
-                        <Heading size="lg" className="gradient-text bg-clip-text text-center" asChild={true}>
+                        <Heading size="lg" gradient={true} className="text-center" asChild={true}>
                             <h1 ref={Title}>Skill</h1>
                         </Heading>
                         <ProgressBar className="w-[90%] transition-all duration-300 m-3" bgColor="linear-gradient(to right, var(--first), var(--second), var(--third))" baseBgColor="var(--bgColor)" maxCompleted={maxProgress} completed={progress} />

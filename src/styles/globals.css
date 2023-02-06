@@ -5,6 +5,7 @@
   --second: #5B42F3;
   --third: #00DDEB;
   --bgColor: rgb(24 24 27);
+  --inputColor: rgb(31 41 55);
 }
 
 * {
@@ -75,6 +76,17 @@ a {
 :-ms-input-placeholder {  
   color: #e7e7e7e7;  
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--first) !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--inputColor) inset;
+}
+
 
 @tailwind base;
 @tailwind components;

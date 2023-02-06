@@ -8,9 +8,10 @@ export type HeadingProps = {
     asChild?: boolean;
     className?: string;
     useDarkMode?: boolean;
+    gradient?: boolean;
 }
 
-export default function Heading({ size = 'md', children, asChild, className, useDarkMode = true }: HeadingProps) {
+export default function Heading({ size = 'md', children, asChild, className, useDarkMode = true, gradient = false }: HeadingProps) {
     const Comp = asChild ? Slot : 'h2';
 
     return (
@@ -23,6 +24,7 @@ export default function Heading({ size = 'md', children, asChild, className, use
                     'text-xlg': size === 'xl',
                 },
                 useDarkMode ? 'text-stone-900 dark:text-white' : 'text-white',
+                gradient ? 'gradient-text bg-clip-text' : '',
                 className
             )}
         >

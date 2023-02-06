@@ -1,22 +1,15 @@
 import { IconType } from "react-icons";
 
-import { LinearGradientIcon } from "../Header/HeaderStyled";
-
 type FooterIconProps = {
     Icon: IconType,
-    href: string
+    href: string,
+    color: string
 }
 
-export const IconFooter = ({ Icon, href }: FooterIconProps) => {
+export const IconFooter = ({ Icon, href, color }: FooterIconProps) => {
     return (
         <a href={href} className="transition-all duration-200 hover:scale-110">
-            <LinearGradientIcon
-                id={'5'}
-                Icon={Icon}
-                size={40}
-                w={"40px"}
-                h={"40px"}
-            />
+            <Icon size={35} color={color} />
         </a>
     );
 }

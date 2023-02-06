@@ -6,6 +6,7 @@ import HomeComponent from "@/components/sections/Home/HomeComponent";
 import About from "@/components/sections/About/About";
 import Skills from "@/components/sections/Skills/Skills";
 import Footer from "@/components/sections/Footer/Footer";
+import Contact from "@/components/sections/Contact/Contact";
 
 export default function Home() {
 
@@ -33,6 +34,7 @@ export default function Home() {
         <HomeComponent />
         <About />
         <Skills />
+        <Contact />
       </section>
       <Footer theme={Theme} />
     </>

@@ -8,9 +8,10 @@ export interface TextProps {
     asChild?: boolean;
     className?: string;
     useDarkMode?: boolean;
+    gradient?: boolean;
 }
 
-export default function Text({ size = 'md', children, asChild, className, useDarkMode = true }: TextProps) {
+export default function Text({ size = 'md', children, asChild, className, useDarkMode = true, gradient = false }: TextProps) {
     const Comp = asChild ? Slot : 'p';
 
     return (
@@ -24,6 +25,7 @@ export default function Text({ size = 'md', children, asChild, className, useDar
                     'text-xl': size === 'xl',
                 },
                 useDarkMode ? 'dark:text-white' : '',
+                gradient ? 'gradient-text bg-clip-text' : '',
                 className
             )}
         >
