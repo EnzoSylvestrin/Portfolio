@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode } from 'react';
+import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react';
 
 import { Slot } from '@radix-ui/react-slot';
 
@@ -9,19 +9,18 @@ export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> { 
 export interface TextInputRootProps {
     children: ReactNode;
     className?: string;
+    textArea?: boolean;
 }
 
-function InputRoot({ children, className }: TextInputRootProps) {
+function InputRoot({ children, className, textArea }: TextInputRootProps) {
     return (
         <div className={clsx('flex items-center Input-Gradient relative w-full z-[1]', className)}>
-            <div className='flex bg-gray-300 items-center gap-2 w-full h-12 ml-1 rounded-md dark:bg-gray-800'>
+            <div className={clsx('flex bg-gray-300 items-center gap-2 w-full ml-1 rounded-md dark:bg-gray-800', textArea ? 'h-full' : 'h-12')}>
                 {children}
             </div>
         </div>
     );
 }
-
-InputRoot.displayName = 'TextInput.Root';
 
 export interface TextIconProps {
     children: ReactNode;
@@ -35,8 +34,6 @@ function InputIcon({ children }: TextInputProps) {
     )
 }
 
-InputIcon.displayName = 'TextInput.Icon'
-
 export interface TextInputInputProps extends InputHTMLAttributes<HTMLInputElement> { }
 
 function InputInput(props: TextInputInputProps) {
@@ -48,10 +45,20 @@ function InputInput(props: TextInputInputProps) {
     )
 }
 
-InputInput.displayName = 'TextInput.Input'
+export interface InputAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> { }
+
+function InputArea(props: InputAreaProps) {
+    return (
+        <textarea
+            className="resize-y max-h-[300px] min-h-[120px] caret-fuchsia-500 bg-transparent w-full py-[6px] placeholder:text-gray-500 text-stone-900 h-[120px] px-2 outline-0 dark:placeholder:text-gray-400 dark:text-white xs:resize-none"
+            {...props}
+        />
+    )
+}
 
 export const Input = {
     Root: InputRoot,
     Icon: InputIcon,
-    Input: InputInput
+    Input: InputInput,
+    TextArea: InputArea
 }

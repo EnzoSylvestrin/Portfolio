@@ -78,19 +78,8 @@ const Contact = () => {
                         </label>
                         <label htmlFor='Mensagem' className="flex flex-col gap-3 w-full items-center md:items-start">
                             <Text size="lg">Mensagem: </Text>
-                            <Input.Root>
-                                <Input.Icon>
-                                    <div>
-                                        <LinearGradientIcon
-                                            id={"7"}
-                                            Icon={MdMessage}
-                                            size={18}
-                                            w={"18px"}
-                                            h={"18px"}
-                                        />
-                                    </div>
-                                </Input.Icon>
-                                <Input.Input type={"text"} id="Mensagem" placeholder="Digite sua mensagem." />
+                            <Input.Root textArea={true}>
+                                <Input.TextArea id="Mensagem" placeholder="Escreva a mensagem." />
                             </Input.Root>
                         </label>
                         <Button text="Enviar" styles="text-xl mt-4" />
