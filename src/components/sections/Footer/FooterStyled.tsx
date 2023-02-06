@@ -8,8 +8,8 @@ type FooterIconProps = {
 
 export const IconFooter = ({ Icon, href, color }: FooterIconProps) => {
     return (
-        <a href={href} className="transition-all duration-200 hover:scale-110">
-            <Icon size={35} color={color} />
+        <a href={href} className="transition-all duration-200 hover:scale-110" rel="noopener noreferrer" target="_blank">
+            <Icon size={32} color={color} />
         </a>
     );
 }

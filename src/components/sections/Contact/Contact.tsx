@@ -1,5 +1,5 @@
 import { FaUserAlt } from "react-icons/fa";
-import { MdEmail, MdLocationOn, MdMessage } from 'react-icons/md';
+import { MdEmail, MdLocationOn } from 'react-icons/md';
 
 import { LinearGradientIcon } from "../Header/HeaderStyled";
 
@@ -17,7 +17,7 @@ const Contact = () => {
                 <div className="flex items-center flex-col justify-center w-full p-4 pb-2 md:flex-row lg:p-6">
                     <div className="w-full flex flex-col my-6 items-center gap-3 md:items-start md:my-0 md:pr-6">
                         <Heading className="text-center md:text-start" size="md" gradient={true}>Entre em contato comigo</Heading>
-                        <Text className="text-center px-4 sm:px-12 md:text-start md:px-0" size="md">Caso queira entrar em contato comigo me mande uma mensagem, eu vou adorar.</Text>
+                        <Text className="text-center px-4 sm:px-12 md:text-start md:px-0" size="md">Caso queira entrar em contato comigo me mande uma mensagem, eu vou adorar 💖.</Text>
                         <div className="flex flex-col gap-4 items-center justify-start mt-8">
                             <div className="flex gap-2 items-center justify-start w-full">
                                 <LinearGradientIcon
@@ -82,7 +82,7 @@ const Contact = () => {
                                 <Input.TextArea id="Mensagem" placeholder="Escreva a mensagem." />
                             </Input.Root>
                         </label>
-                        <Button text="Enviar" styles="text-xl mt-4" />
+                        <Button href="#" text="Enviar" styles="text-xl mt-4" />
                     </div>
                 </div>
             </div>

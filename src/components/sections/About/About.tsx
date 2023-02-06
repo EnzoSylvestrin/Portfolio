@@ -1,9 +1,10 @@
-import ContainerCommom from '@/components/ContainerCommom';
 import Avatar from '../../../assets/Avatar.png';
 
 import Button from '../../Button/Button';
 import Heading from '../../Heading';
 import Text from '../../Text';
+
+import ContainerCommom from '@/components/ContainerCommom';
 
 const About = () => {
     return (
@@ -19,7 +20,7 @@ const About = () => {
                         <Text className='px-0 text-center sm:px-4' size='lg'>
                             Eu sou de Jundiaí SP. estou atualmente estudando infomática na escola Prof. Luiz Rosa, e começei minha carreira em TI na Bitbyte infomática, empresa com a qual ainda trabalho, sou apaixonado por automação de sistemas e atuo também como freelancer. Para saber mais sobre minhas habilidades e sobre minha carreira clique e faça o download do meu curriculo.
                         </Text>
-                        <Button text='Currículo' styles="text-xl mt-6" />
+                        <Button href={'https://fileup.to/5i12/Curriculo-Enzo.pdf'} text='Currículo' styles="text-xl mt-6" />
                     </div>
                 </div>
             </div>

@@ -12,17 +12,17 @@ const Footer = ({ theme }: { theme: 'dark' | 'light' }) => {
             <div className="pt-4">
                 <div className="flex items-center gap-4 justify-center mb-2">
                     <IconFooter
-                        href="#"
+                        href="https://www.linkedin.com/in/enzo-sylvestrin-336b71221/"
                         Icon={BsLinkedin}
                         color={"#310ece"}
                     />
                     <IconFooter
-                        href="#"
+                        href="https://api.whatsapp.com/send/?phone=5511993346502&type=phone_number"
                         Icon={BsWhatsapp}
                         color={"#0ece2e"}
                     />
                     <IconFooter
-                        href="#"
+                        href="https://twitter.com/Iluminights"
                         Icon={BsTwitter}
                         color={"#1577d3"}
                     />

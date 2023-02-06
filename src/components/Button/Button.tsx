@@ -4,9 +4,10 @@ import { ButtonHTMLAttributes } from "react";
 type ButtonProps = {
     text: string,
     styles?: string,
+    href: string,
 };
 
-const Button = ({ text, styles, ...rest }: ButtonHTMLAttributes<HTMLButtonElement> & ButtonProps) => {
+const Button = ({ text, styles, href, ...rest }: ButtonHTMLAttributes<HTMLButtonElement> & ButtonProps) => {
     return (
         <button className={clsx(
             "flex border-0 rounded-lg text-black p-[3px] select-none whitespace-nowrap cursor-pointer" +
@@ -14,9 +15,9 @@ const Button = ({ text, styles, ...rest }: ButtonHTMLAttributes<HTMLButtonElemen
         )}
             {...rest}
         >
-            <span className="bg-gray-200 dark:bg-neutral-900 px-2 py-1 rounded-md w-full h-full transition-[background-color] duration-300">
+            <a href={href} className="bg-gray-200 dark:bg-neutral-900 px-2 py-1 rounded-md w-full h-full transition-[background-color] duration-300" rel="noopener noreferrer" target="_blank">
                 {text}
-            </span>
+            </a>
         </button>
     );
 }

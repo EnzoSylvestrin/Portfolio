@@ -28,7 +28,7 @@ const HomeComponent = () => {
                         }}
                     />
 
-                    <Button text="Encontre-me" styles="mt-8 text-lg md:text-xl" />
+                    <Button href="https://www.linkedin.com/in/enzo-sylvestrin-336b71221/" text="Encontre-me" styles="mt-8 text-lg md:text-xl" />
                 </div>
                 <div className="w-[50%] items-center justify-center hidden md:flex">
                     <Player

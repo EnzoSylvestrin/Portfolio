@@ -56,14 +56,20 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                         clsx('flex items-center justify-center gap-6 absolute right-0 bottom-5 w-full md:hidden', State ? 'visible' : 'invisible')
                     }>
                         <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={"0"} />
-                        <li className="text-xxl"><LinearGradientIcon Icon={AiOutlineGithub} size={30} id={"0"} /></li>
+                        <li className="text-xxl">
+                            <a href="https://github.com/EnzoSylvestrin" rel="noopener noreferrer" target="_blank">
+                                <LinearGradientIcon Icon={AiOutlineGithub} size={30} id={"0"} />
+                            </a>
+                        </li>
                     </div>
                     <div className="w-[2px] h-full border-gradient absolute left-0 bottom-0 md:hidden"></div>
                 </ul>
                 <ul className="hidden items-center justify-center gap-2 text-gray-200 md:flex mb-1">
                     <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={'2'} />
                     <li className="text-xxl transition-all duration-300 hover:scale-110">
-                        <LinearGradientIcon Icon={AiOutlineGithub} size={30} id={"2"} />
+                        <a href="https://github.com/EnzoSylvestrin" rel="noopener noreferrer" target="_blank">
+                            <LinearGradientIcon Icon={AiOutlineGithub} size={30} id={"2"} />
+                        </a>
                     </li>
                 </ul>
                 <div className="w-full h-[2px] border-gradient absolute left-0 bottom-0"></div>
