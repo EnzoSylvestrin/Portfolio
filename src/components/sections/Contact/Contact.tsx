@@ -14,10 +14,10 @@ const Contact = () => {
         <ContainerCommom id="Contato">
             <div>
                 <Heading size="xl" gradient={true}>Contato</Heading>
-                <div className="flex items-center justify-center w-full p-12 pb-2">
-                    <div className="w-[90%] flex flex-col items-start pr-10 gap-3">
-                        <Heading size="md" gradient={true}>Entre em contato comigo</Heading>
-                        <Text size="md">Caso queira entrar em contato comigo me mande uma mensagem, eu vou adorar.</Text>
+                <div className="flex items-center flex-col justify-center w-full p-4 pb-2 md:flex-row lg:p-6">
+                    <div className="w-full flex flex-col my-6 items-center gap-3 md:items-start md:my-0 md:pr-6">
+                        <Heading className="text-center md:text-start" size="md" gradient={true}>Entre em contato comigo</Heading>
+                        <Text className="text-center px-4 sm:px-12 md:text-start md:px-0" size="md">Caso queira entrar em contato comigo me mande uma mensagem, eu vou adorar.</Text>
                         <div className="flex flex-col gap-4 items-center justify-start mt-8">
                             <div className="flex gap-2 items-center justify-start w-full">
                                 <LinearGradientIcon
@@ -27,7 +27,7 @@ const Contact = () => {
                                     w={"28px"}
                                     h={"28px"}
                                 />
-                                <Text size="lg">Enzospavani@gmail.com</Text>
+                                <Text className="text-md xs:text-lg" size="md">Enzospavani@gmail.com</Text>
                             </div>
                             <div className="flex gap-2 items-center justify-start w-full">
                                 <LinearGradientIcon
@@ -37,12 +37,12 @@ const Contact = () => {
                                     w={"30px"}
                                     h={"30px"}
                                 />
-                                <Text size="lg">Jundiaí, São Paulo - Brasil</Text>
+                                <Text className="text-md xs:text-lg" size="md">Jundiaí, São Paulo - Brasil</Text>
                             </div>
                         </div>
                     </div>
-                    <div className="w-full flex flex-col items-center justify-center gap-5 px-3">
-                        <label htmlFor='Nome' className="flex flex-col gap-3 w-full">
+                    <div className="w-full flex flex-col items-center justify-center gap-5 px-2 xs:px-6">
+                        <label htmlFor='Nome' className="flex flex-col gap-3 w-full items-center md:items-start">
                             <Text size="lg">Nome: </Text>
                             <Input.Root>
                                 <Input.Icon>
@@ -59,7 +59,7 @@ const Contact = () => {
                                 <Input.Input type={"text"} id="Nome" placeholder="Digite seu nome..." />
                             </Input.Root>
                         </label>
-                        <label htmlFor='Email' className="flex flex-col gap-3 w-full">
+                        <label htmlFor='Email' className="flex flex-col gap-3 w-full items-center md:items-start">
                             <Text size="lg">Email: </Text>
                             <Input.Root>
                                 <Input.Icon>
@@ -76,7 +76,7 @@ const Contact = () => {
                                 <Input.Input type={"email"} id="Email" placeholder="Digite seu email..." />
                             </Input.Root>
                         </label>
-                        <label htmlFor='Mensagem' className="flex flex-col gap-3 w-full">
+                        <label htmlFor='Mensagem' className="flex flex-col gap-3 w-full items-center md:items-start">
                             <Text size="lg">Mensagem: </Text>
                             <Input.Root>
                                 <Input.Icon>
@@ -90,7 +90,7 @@ const Contact = () => {
                                         />
                                     </div>
                                 </Input.Icon>
-                                <Input.Input type={"text"} id="Mensagem" placeholder="Digite seu email..." />
+                                <Input.Input type={"text"} id="Mensagem" placeholder="Digite sua mensagem." />
                             </Input.Root>
                         </label>
                         <Button text="Enviar" styles="text-xl mt-4" />
