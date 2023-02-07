@@ -1,6 +1,6 @@
 import { BsFillCaretUpFill } from 'react-icons/bs';
 
-import { LinearGradientIcon } from '../sections/Header/HeaderStyled';
+import { LinearGradientIcon } from './sections/Header/HeaderStyled';
 import { useEffect, useState } from 'react';
 
 const UpComponent = () => {

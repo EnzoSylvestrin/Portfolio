@@ -7,7 +7,7 @@ import About from "@/components/sections/About/About";
 import Skills from "@/components/sections/Skills/Skills";
 import Footer from "@/components/sections/Footer/Footer";
 import Contact from "@/components/sections/Contact/Contact";
-import UpComponent from "@/components/UpComponent/UpComponent";
+import UpComponent from "@/components/UpComponent";
 
 export default function Home() {
 

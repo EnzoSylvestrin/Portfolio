@@ -21,6 +21,7 @@
     "motion": "^10.15.5",
     "next": "13.1.6",
     "react": "18.2.0",
+    "react-color-palette": "^6.2.0",
     "react-colorful": "^5.6.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",

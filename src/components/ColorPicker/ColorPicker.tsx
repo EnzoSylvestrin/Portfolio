@@ -15,6 +15,9 @@ const ColorPicker = ({ id, initialValue, className, active, setActive }: ColorPi
     let showPicker = active === id;
 
     const handleChange = (newColor: string) => {
+        if (newColor.indexOf('NaN') > -1) {
+            newColor = "#fff"
+        }
         setColor(newColor);
         document.body.style.setProperty(getProperty(), newColor);
         localStorage.setItem(id.toString(), newColor);
@@ -47,7 +50,9 @@ const ColorPicker = ({ id, initialValue, className, active, setActive }: ColorPi
                 <div className='rounded-[50%] w-5 h-5' style={{ backgroundColor: color }}></div>
             </div>
             {showPicker && (
-                <HexColorPicker style={{ position: "absolute" }} color={color} onChange={handleChange} />
+                <div className='smallColor'>
+                    <HexColorPicker style={{ position: "absolute" }} color={color} onChange={handleChange} />
+                </div>
             )}
         </div>
     );

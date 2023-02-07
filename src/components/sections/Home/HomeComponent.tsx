@@ -14,7 +14,7 @@ const HomeComponent = () => {
                     <Heading asChild size='md' className="mb-6 text-center md:text-start sm:text-xlg">
                         <h1>
                             Seja bem vindo!<br />
-                            meu nome é Enzo<br />
+                            meu nome é Enzo
                         </h1>
                     </Heading>
                     <ContainerColors />

@@ -4,6 +4,22 @@
     background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
     background-clip: context-box, border-box;
 }
+
+.smallColor .react-colorful {
+    width: 160px;
+    height: 160px;
+}
+
+.smallColor .react-colorful__hue {
+    height: 18px;
+}
+
+@media (max-width: 400px) {
+    .smallColor .react-colorful {
+        width: 120px;
+        height: 120px;
+    }
+}
  
 .right-calc {
     left: calc(50% + 30px);
