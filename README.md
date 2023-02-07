@@ -1,38 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  💻<br /><a href="https://portfolio-enzosylvestrin.vercel.app">Portfólio - Enzo Sylvestrin</a>
+</h1>
 
-## Getting Started
+![Resultado final do projeto](img-preview.png)
 
-First, run the development server:
+<h4 align="center"><a href="https://portfolio-enzosylvestrin.vercel.app">Clique para visitar o projeto</a></h4>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 📚 Seções
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O site é composto por sete seções:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Home:** Apresentação inicial;
+- **Sobre:** Descrição dizendo um pouco sobre quem eu sou;
+- **Skills:** Seção que mostra as minhas habilidades;
+- **Serviços:** Exibe através de cards os diferentes serviços em que possuo conhecimentos;
+- **Certificados:** Meus certificados;
+- **Projetos:** Apresenta alguns projetos desenvolvidos e com link direto para os respectivos códigos no GitHub;
+- **Contato:** Formas de entrar em contato comigo, incluindo um formulário para me enviar um email;
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🙃 Funcionalidades extras
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- No menu o usuário consegue alterar o tema clicando no ícone da lua ou do sol;
+- É possível alterar a cor do degradê do site, clicando sobre as cores na tela inicial.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## 💼 Tecnologias utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+Algumas das tecnologias utilizadas para o desenvolvimento foram:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- HTML;
+- CSS;
+- Tailwindcss;
+- TypeScript;
+- Next;
+- Framer motion;
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+<h2>👻 Autor</h2>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/EnzoSylvestrin">
+        <img src="https://avatars.githubusercontent.com/u/88488844?v=4" width="100px;" alt="Minha foto no GitHub"/><br>
+        <sub>
+          <b>Enzo Sylvestrin</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
