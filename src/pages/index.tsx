@@ -7,6 +7,7 @@ import About from "@/components/sections/About/About";
 import Skills from "@/components/sections/Skills/Skills";
 import Footer from "@/components/sections/Footer/Footer";
 import Contact from "@/components/sections/Contact/Contact";
+import UpComponent from "@/components/UpComponent/UpComponent";
 
 export default function Home() {
 
@@ -31,6 +32,7 @@ export default function Home() {
     <>
       <Header setTheme={setTheme} />
       <section className={clsx("transition-all duration-300", Theme == 'light' ? 'bg-gray-200' : 'dark bg-zinc-900')}>
+        <UpComponent />
         <HomeComponent />
         <About />
         <Skills />

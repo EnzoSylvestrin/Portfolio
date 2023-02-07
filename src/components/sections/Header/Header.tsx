@@ -62,7 +62,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                             </a>
                         </li>
                     </div>
-                    <div className="w-[2px] h-full border-gradient absolute left-0 bottom-0 md:hidden"></div>
+                    <div className="w-[2px] h-full border-gradient-animate absolute left-0 make-animate bottom-0 md:hidden"></div>
                 </ul>
                 <ul className="hidden items-center justify-center gap-2 text-gray-200 md:flex mb-1">
                     <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={'2'} />
@@ -72,7 +72,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                         </a>
                     </li>
                 </ul>
-                <div className="w-full h-[2px] border-gradient absolute left-0 bottom-0"></div>
+                <div className="w-full h-[2px] border-gradient-animate absolute make-animate left-0 bottom-0"></div>
             </nav>
         </header>
     )

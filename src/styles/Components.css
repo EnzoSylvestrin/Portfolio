@@ -37,7 +37,6 @@
     background-size: 300%;
     animation: animaBorda 10s linear alternate infinite;
     z-index: -1;
-    border-radius: 50%;
 }
 
 .Input-Gradient::after {
@@ -52,10 +51,15 @@
     height: calc(100% + 6px);
     background: linear-gradient(45deg, var(--first), var(--second), var(--third), var(--first), var(--second), var(--third));
     background-size: 300%;
-    border-radius: 8px;
     animation: animaBorda 10s linear alternate infinite;
     z-index: -1;
 }
+
+.make-animate {
+    background-size: 300%;
+    animation: animaBorda 10s linear alternate infinite;
+}
+
 
 /* .Card-Gradient:hover.Card-Gradient::before {
     animation: animaBorda 5s linear alternate infinite;

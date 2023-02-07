@@ -8,13 +8,13 @@ import { IconFooter } from "./FooterStyled";
 const Footer = ({ theme }: { theme: 'dark' | 'light' }) => {
     return (
         <footer className={clsx("relative h-full flex items-center justify-center", theme == 'dark' ? 'dark bg-zinc-800' : 'bg-gray-300')}>
-            <div className="w-full h-[2px] border-gradient absolute left-0 top-0"></div>
+            <div className="w-full h-[2px] border-gradient-animate absolute make-animate left-0 top-0"></div>
             <div className="pt-4">
                 <div className="flex items-center gap-4 justify-center mb-2">
                     <IconFooter
                         href="https://www.linkedin.com/in/enzo-sylvestrin-336b71221/"
                         Icon={BsLinkedin}
-                        color={"#310ece"}
+                        color={"#0a2bc0"}
                     />
                     <IconFooter
                         href="https://api.whatsapp.com/send/?phone=5511993346502&type=phone_number"

@@ -14,7 +14,7 @@ export interface TextInputRootProps {
 
 function InputRoot({ children, className, textArea }: TextInputRootProps) {
     return (
-        <div className={clsx('flex items-center Input-Gradient relative w-full z-[1]', className)}>
+        <div className={clsx('flex items-center Input-Gradient relative w-full z-[1] after:rounded-lg before:rounded-lg', className)}>
             <div className={clsx('flex bg-gray-300 items-center gap-2 w-full ml-1 rounded-md dark:bg-gray-800', textArea ? 'h-full' : 'h-12')}>
                 {children}
             </div>
