@@ -14,17 +14,17 @@ const Footer = ({ theme }: { theme: 'dark' | 'light' }) => {
                     <IconFooter
                         href="https://www.linkedin.com/in/enzo-sylvestrin-336b71221/"
                         Icon={BsLinkedin}
-                        color={"#0a2bc0"}
+                        color={"#2362c0"}
                     />
                     <IconFooter
                         href="https://api.whatsapp.com/send/?phone=5511993346502&type=phone_number"
                         Icon={BsWhatsapp}
-                        color={"#0ece2e"}
+                        color={"#0bcc15"}
                     />
                     <IconFooter
                         href="https://twitter.com/Iluminights"
                         Icon={BsTwitter}
-                        color={"#1577d3"}
+                        color={"#14ade9"}
                     />
                 </div>
                 <Text size="lg">Enzo Sylvestrin 2023 ©</Text>

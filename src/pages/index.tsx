@@ -8,6 +8,7 @@ import Skills from "@/components/sections/Skills/Skills";
 import Footer from "@/components/sections/Footer/Footer";
 import Contact from "@/components/sections/Contact/Contact";
 import UpComponent from "@/components/UpComponent";
+import Services from "@/components/sections/Services/Services";
 
 export default function Home() {
 
@@ -36,6 +37,7 @@ export default function Home() {
         <HomeComponent />
         <About />
         <Skills />
+        <Services />
         <Contact />
       </section>
       <Footer theme={Theme} />
