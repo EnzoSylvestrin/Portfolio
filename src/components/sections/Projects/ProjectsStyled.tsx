@@ -16,7 +16,7 @@ type ProjectCardProps = {
 export const ProjectCards = ({ imgSrc, description, title, Repo, Site }: ProjectCardProps) => {
     return (
         <div className='w-full rounded-t-xl bg-gray-300 shadow-lg dark:bg-slate-900'>
-            <img src={imgSrc} className="w-full h-48 rounded-t-xl" />
+            <img src={imgSrc} className="w-full h-48 rounded-t-xl object-cover" />
             <div className='flex flex-col items-center justify-center p-4 mb-2'>
                 <Heading size='md' className='text-center mb-2' gradient={true}>{title}</Heading>
                 <Text size='md' className='text-center'>{description}</Text>

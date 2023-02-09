@@ -13,7 +13,7 @@ const Projects = () => {
         <ContainerCommom id="Projetos">
             <div>
                 <TitleSection title="Projetos" />
-                <div className="w-full p-8 pb-0 grid grid-cols-3 gap-6">
+                <div className="w-full p-4 pb-0 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:p-2 md:grid-cols-3 lg:p-8">
                     <ProjectCards
                         imgSrc={MoveStats.src}
                         title="Move Stats"
