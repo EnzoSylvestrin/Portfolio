@@ -47,7 +47,7 @@ export const ProjectCards = ({ imgSrc, description, title, Repo, Site }: Project
 
 export const ContainerIcon = ({ children, href }: { children: ReactNode, href?: string }) => {
     return (
-        <a href={href} className='rounded-full p-2 flex items-center justify-center text-white transition-transform duration-300 bg-gray-800 hover:scale-110'>
+        <a href={href} className='rounded-full p-2 flex items-center justify-center text-white transition-transform duration-300 bg-gray-800 hover:scale-110' target="_blank" rel="noopener noreferrer">
             {children}
         </a>
     )
