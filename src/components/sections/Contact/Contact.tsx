@@ -1,19 +1,18 @@
 import { FaUserAlt } from "react-icons/fa";
 import { MdEmail, MdLocationOn } from 'react-icons/md';
 
-import { LinearGradientIcon } from "../Header/HeaderStyled";
-
 import ContainerCommom from "@/components/ContainerCommom";
 import Heading from "@/components/Heading";
 import { Input } from "@/components/Input/Input";
 import Text from "@/components/Text";
 import Button from "@/components/Button/Button";
+import { LinearGradientIcon, TitleSection } from "@/components/CommomComponents";
 
 const Contact = () => {
     return (
         <ContainerCommom id="Contato">
             <div>
-                <Heading size="xl" gradient={true}>Contato</Heading>
+                <TitleSection title="Contato" />
                 <div className="flex items-center flex-col justify-center w-full p-4 pb-2 md:flex-row lg:p-6">
                     <div className="w-full flex flex-col my-6 items-center gap-3 md:items-start md:my-0 md:pr-6">
                         <Heading className="text-center md:text-start" size="md" gradient={true}>Entre em contato comigo</Heading>
@@ -24,8 +23,6 @@ const Contact = () => {
                                     id={"6"}
                                     Icon={MdEmail}
                                     size={28}
-                                    w={"28px"}
-                                    h={"28px"}
                                 />
                                 <Text className="text-md xs:text-lg" size="md">Enzospavani@gmail.com</Text>
                             </div>
@@ -34,8 +31,6 @@ const Contact = () => {
                                     id={"6"}
                                     Icon={MdLocationOn}
                                     size={30}
-                                    w={"30px"}
-                                    h={"30px"}
                                 />
                                 <Text className="text-md xs:text-lg" size="md">Jundiaí, São Paulo - Brasil</Text>
                             </div>
@@ -51,8 +46,6 @@ const Contact = () => {
                                             id={"7"}
                                             Icon={FaUserAlt}
                                             size={18}
-                                            w={"18px"}
-                                            h={"18px"}
                                         />
                                     </div>
                                 </Input.Icon>
@@ -68,8 +61,6 @@ const Contact = () => {
                                             id={"7"}
                                             Icon={MdEmail}
                                             size={20}
-                                            w={"20px"}
-                                            h={"20px"}
                                         />
                                     </div>
                                 </Input.Icon>

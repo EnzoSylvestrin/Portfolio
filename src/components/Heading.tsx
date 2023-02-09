@@ -1,17 +1,8 @@
 import { Slot } from '@radix-ui/react-slot';
 import { clsx } from 'clsx';
-import { ReactNode } from 'react';
+import { TextProps } from './Text';
 
-export type HeadingProps = {
-    size?: 'sm' | 'md' | 'lg' | 'xl';
-    children: ReactNode;
-    asChild?: boolean;
-    className?: string;
-    useDarkMode?: boolean;
-    gradient?: boolean;
-}
-
-export default function Heading({ size = 'md', children, asChild, className, useDarkMode = true, gradient = false }: HeadingProps) {
+export default function Heading({ size = 'md', children, asChild, className, useDarkMode = true, gradient = false }: TextProps) {
     const Comp = asChild ? Slot : 'h2';
 
     return (

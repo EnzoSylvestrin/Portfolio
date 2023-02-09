@@ -1,10 +1,10 @@
-import { IconType } from "react-icons";
+import { HTMLAttributes } from "react";
 
-import { LinearGradientIcon } from "../Header/HeaderStyled";
+import { IconType } from "react-icons";
 
 import Heading from "@/components/Heading";
 import Text from "@/components/Text";
-import { HTMLAttributes } from "react";
+import { LinearGradientIcon } from "@/components/CommomComponents";
 
 type ServiceCardProps = HTMLAttributes<HTMLDivElement> & {
     icon: IconType,
@@ -21,8 +21,6 @@ export const ServiceCard = ({ icon, text, title, className, ...rest }: ServiceCa
                     id="10"
                     Icon={icon}
                     size={60}
-                    w="60px"
-                    h="60px"
                 />
                 <Heading size="md" className="text-center" gradient={true}>{title}</Heading>
                 <Text size="md" className="text-center px-2">{text}</Text>

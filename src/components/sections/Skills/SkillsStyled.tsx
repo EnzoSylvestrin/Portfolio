@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import { IconType } from "react-icons/lib";
 
-import { LinearGradientIcon } from "../Header/HeaderStyled";
+import { LinearGradientIcon } from "@/components/CommomComponents";
 
 type CardProps = HTMLAttributes<HTMLDivElement> & {
     Icon: IconType,
@@ -17,8 +17,6 @@ export const Card = ({ Icon, ...rest }: CardProps) => {
                 <LinearGradientIcon
                     Icon={Icon}
                     id={"4"}
-                    w={"80px"}
-                    h={"82px"}
                     size={80}
                 />
             </div>

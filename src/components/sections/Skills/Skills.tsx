@@ -15,6 +15,7 @@ import Text from "@/components/Text";
 
 import { Card } from './SkillsStyled';
 import { IconType } from "react-icons/lib";
+import { TitleSection } from "@/components/CommomComponents";
 
 const Skills = () => {
 
@@ -71,7 +72,7 @@ const Skills = () => {
     return (
         <ContainerCommom id="Skills">
             <div>
-                <Heading className="gradient-text bg-clip-text mb-3" size="xl">Skills</Heading>
+                <TitleSection title="Skills" className="mb-3" />
                 <div className="flex flex-col flex-nowrap w-full sm:flex-row">
                     <div className="w-[100%] flex flex-col items-center justify-center my-3 sm:my-0 sm:w-[30%]">
                         <Heading size="lg" gradient={true} className="text-center" asChild={true}>

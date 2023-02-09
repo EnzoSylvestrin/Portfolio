@@ -2,9 +2,10 @@ import { Slot } from '@radix-ui/react-slot';
 import { clsx } from 'clsx';
 import { ReactNode } from 'react';
 
-export interface TextProps {
+export type TextProps = {
     size?: 'sm' | 'md' | 'lg' | 'xl';
     children: ReactNode;
+    align?: 'left' | 'center' | 'right',
     asChild?: boolean;
     className?: string;
     useDarkMode?: boolean;

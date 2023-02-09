@@ -5,12 +5,13 @@ import Heading from '../../Heading';
 import Text from '../../Text';
 
 import ContainerCommom from '@/components/ContainerCommom';
+import { TitleSection } from '@/components/CommomComponents';
 
 const About = () => {
     return (
         <ContainerCommom id="Sobre">
             <div>
-                <Heading size='xl' gradient={true} className="text-center mb-4">Sobre mim</Heading>
+                <TitleSection title="Sobre mim" />
                 <div className="flex items-center justify-center w-full flex-col lg:flex-row">
                     <div className='flex w-full items-center justify-center lg:w-[45%]'>
                         <img src={Avatar.src} className="w-[270px] h-[270px] select-none my-4 rounded-[50%] shadow-lg border-gradient sm:w-[340px] sm:h-[340px] lg:my-0" alt="Meu avatar" />

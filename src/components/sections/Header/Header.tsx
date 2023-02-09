@@ -1,9 +1,12 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
+import clsx from 'clsx';
+
 import { AiOutlineGithub } from 'react-icons/ai';
 
-import { ItemUl, LinearGradientIcon, MenuComponent, ThemeComponent } from './HeaderStyled';
-import clsx from 'clsx';
+import { ItemUl, MenuComponent, ThemeComponent } from './HeaderStyled';
+
+import { LinearGradientIcon } from '@/components/CommomComponents';
 
 const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dark">> }) => {
 

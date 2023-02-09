@@ -1,11 +1,11 @@
-import { HTMLAttributes, LiHTMLAttributes, ReactNode } from 'react';
+import { HTMLAttributes, LiHTMLAttributes } from 'react';
 
 import clsx from 'clsx';
 
 import { BiMoon, BiSun } from 'react-icons/bi';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { HiXMark } from 'react-icons/hi2';
-import { IconBaseProps, IconType } from 'react-icons/lib';
+import { LinearGradientIcon } from '@/components/CommomComponents';
 
 export const ItemUl = ({ children, state, link }: { children: string, state: boolean, link: string }) => {
     return (
@@ -33,21 +33,9 @@ export const MenuComponent = ({ state, ...rest }: HTMLAttributes<HTMLDivElement>
     return (
         <div className="absolute top right-[5%] transition-all flex items-center justify-center duration-300 hover:scale-110 md:hidden" {...rest}>
             {
-                <LinearGradientIcon Icon={state ? HiXMark : AiOutlineMenu} w={'24px'} h={'24px'} id={'3'} size={22} />
+                <LinearGradientIcon Icon={state ? HiXMark : AiOutlineMenu} id={'3'} size={22} />
             }
         </div>
     );
 }
 
-export const LinearGradientIcon = ({ Icon, id, w, h, ...rest }: IconBaseProps & { Icon: IconType, id: string, w?: string, h?: string }) => {
-    return (
-        <svg width={w == null ? "30px" : w} height={h == null ? "30px" : h} className="flex items-center justify-center">
-            <linearGradient id={id} x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="var(--first)" />
-                <stop offset="50%" stopColor="var(--second)" />
-                <stop offset="100%" stopColor="var(--third)" />
-            </linearGradient>
-            <Icon style={{ fill: `url(#${id})` }} {...rest} />
-        </svg>
-    );
-}
