@@ -33,7 +33,10 @@ const About = () => {
                     >
                         <Heading size="lg" className='mb-4'>Quem sou eu?</Heading>
                         <Text className='px-0 text-center sm:px-4' size='lg'>
-                            Eu sou de Jundiaí SP. estou atualmente estudando infomática na escola Prof. Luiz Rosa, e começei minha carreira em TI na Bitbyte infomática, empresa com a qual ainda trabalho, sou apaixonado por automação de sistemas e atuo também como freelancer. Para saber mais sobre minhas habilidades e sobre minha carreira clique e faça o download do meu curriculo.
+                            Eu sou de Jundiaí SP. atualmente estou sou estudante de ciência da computação
+                            na UNIP, Tenho experiência na área, sou apaixonado por automação de sistemas e atuo também
+                            como freelancer. Para saber mais sobre minhas habilidades e sobre minha carreira
+                            clique e faça o download do meu curriculo.
                         </Text>
                         <Button href={'/Curriculo-Enzo.pdf'} text='Currículo' styles="text-xl mt-6" />
                     </motion.div>
