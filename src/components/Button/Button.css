@@ -7,3 +7,8 @@ button:hover a {
     background: none !important;
     color: white !important;
 }
+
+button:hover p {
+    background: none !important;
+    color: white !important;
+}

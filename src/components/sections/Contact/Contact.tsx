@@ -1,3 +1,5 @@
+import { HTMLAttributes, useRef } from "react";
+
 import { FaUserAlt } from "react-icons/fa";
 import { MdEmail, MdLocationOn } from 'react-icons/md';
 
@@ -9,6 +11,13 @@ import Button from "@/components/Button/Button";
 import { LinearGradientIcon, TitleSection } from "@/components/CommomComponents";
 
 const Contact = () => {
+
+    const Form = useRef<HTMLFormElement>(null)
+
+    const HandleSubmit = () => {
+        Form.current?.requestSubmit();
+    }
+
     return (
         <ContainerCommom id="Contato">
             <div>
@@ -36,7 +45,10 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full flex flex-col items-center justify-center gap-5 px-2 xs:px-6">
+                    <form action="https://formsubmit.co/fecfce57d3e403900dad1688f2d9c317" ref={Form} method="POST" className="w-full flex flex-col items-center justify-center gap-5 px-2 xs:px-6">
+                        <input type="hidden" name="_next" value="https://portfolio-enzosylvestrin.vercel.app" />
+                        <input type="hidden" name="_template" value="box" />
+                        <input type="hidden" name="_autoresponse" value="Recebi sua mensagem, muito obrigado por entrar em contato! Responderei o mais rápido possível..." />
                         <label htmlFor='Nome' className="flex flex-col gap-3 w-full items-center md:items-start">
                             <Text size="lg">Nome: </Text>
                             <Input.Root>
@@ -49,7 +61,7 @@ const Contact = () => {
                                         />
                                     </div>
                                 </Input.Icon>
-                                <Input.Input type={"text"} id="Nome" placeholder="Digite seu nome..." />
+                                <Input.Input type={"text"} name="Nome" id="Nome" placeholder="Digite seu nome..." required />
                             </Input.Root>
                         </label>
                         <label htmlFor='Email' className="flex flex-col gap-3 w-full items-center md:items-start">
@@ -64,17 +76,17 @@ const Contact = () => {
                                         />
                                     </div>
                                 </Input.Icon>
-                                <Input.Input type={"email"} id="Email" placeholder="Digite seu email..." />
+                                <Input.Input type={"email"} name="Email" id="Email" placeholder="Digite seu email..." required />
                             </Input.Root>
                         </label>
                         <label htmlFor='Mensagem' className="flex flex-col gap-3 w-full items-center md:items-start">
                             <Text size="lg">Mensagem: </Text>
                             <Input.Root textArea={true}>
-                                <Input.TextArea id="Mensagem" placeholder="Escreva a mensagem." />
+                                <Input.TextArea id="Mensagem" name="Mensagem" placeholder="Escreva a mensagem." required />
                             </Input.Root>
                         </label>
-                        <Button href="#" text="Enviar" styles="text-xl mt-4" />
-                    </div>
+                        <Button text="Enviar" styles="text-xl mt-4" onClick={HandleSubmit} />
+                    </form>
                 </div>
             </div>
         </ContainerCommom >

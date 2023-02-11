@@ -11,6 +11,7 @@ import Footer from "@/components/sections/Footer/Footer";
 import Contact from "@/components/sections/Contact/Contact";
 import UpComponent from "@/components/UpComponent";
 import Services from "@/components/sections/Services/Services";
+import LoadingComponent from "@/components/Loading/LoadingComponent";
 
 const Projects = dynamic(
   () => import("@/components/sections/Projects/Projects"),
@@ -20,6 +21,7 @@ const Projects = dynamic(
 export default function Home() {
 
   const [Theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [loadingProjects, setLoadingProjects] = useState(true);
 
   useEffect(() => {
     let theme: string | null = localStorage.getItem('theme');
@@ -45,7 +47,16 @@ export default function Home() {
         <About />
         <Skills />
         <Services />
-        <Projects />
+        {
+          loadingProjects
+            ?
+            <>
+              <Projects loading={setLoadingProjects} />
+              <LoadingComponent w={"50%"} h={"50%"} />
+            </>
+            :
+            <Projects />
+        }
         <Contact />
       </section>
       <Footer theme={Theme} />

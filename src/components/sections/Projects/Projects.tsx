@@ -11,6 +11,7 @@ import Sorteio from '../../../assets/Sorteio.png'
 import AkameWiki from '../../../assets/Akame-wiki.png';
 
 import { ProjectCardProps, ProjectCards } from "./ProjectsStyled";
+import { Dispatch, SetStateAction, useEffect } from "react";
 
 type breakPointsProps = {
     breakPoint: number,
@@ -18,7 +19,7 @@ type breakPointsProps = {
     height: number
 }
 
-const Projects = () => {
+const Projects = ({ loading }: { loading?: Dispatch<SetStateAction<boolean>> }) => {
 
     const BreakPoints: breakPointsProps[] = [
         { breakPoint: 0, width: 500, height: 330 },
@@ -64,6 +65,12 @@ const Projects = () => {
         }
     ]
 
+    useEffect(() => {
+        if (loading != null) {
+            loading(false);
+        }
+    }, [])
+
     return (
         <ContainerCommom id="Projetos">
             <div>
@@ -71,7 +78,7 @@ const Projects = () => {
                 <div className="flex items-center justify-center my-16">
                     {
                         BreakPoints.map((item, i) => {
-                            return <MediaQuery maxWidth={BreakPoints.length - 1 == i ? 9999 : BreakPoints[i + 1].breakPoint} minWidth={item.breakPoint}>
+                            return <MediaQuery key={i} maxWidth={BreakPoints.length - 1 == i ? 9999 : BreakPoints[i + 1].breakPoint} minWidth={item.breakPoint}>
                                 <Carousel height={item.height} width={item.width} yOrigin={item.height / 10} yRadius={item.height / 6} xOrigin={item.width / 2} xRadius={item.width / 2.3} autoPlay={true} >
                                     {
                                         ProjectsCards.map((item, i) => {

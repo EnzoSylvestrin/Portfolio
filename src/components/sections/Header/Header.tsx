@@ -49,6 +49,9 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                     <ItemUl state={State} link="Skills">
                         Skills
                     </ItemUl>
+                    <ItemUl state={State} link="Servicos">
+                        Serviços
+                    </ItemUl>
                     <ItemUl state={State} link="Projetos">
                         Projetos
                     </ItemUl>
