@@ -34,11 +34,11 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
 
     return (
         <header id="#top">
-            <nav className="w-full fixed z-50 bg-neutral-800 px-12 flex items-center justify-center h-[12vh] min-h-[4rem] md:justify-between">
+            <nav className="w-full fixed z-[999] bg-neutral-800 px-12 flex items-center justify-center h-[12vh] min-h-[4rem] md:justify-between">
                 <a href="#top" className="text-center text-transparent text-2xl bg-clip-text gradient-text transition-all duration-300 hover:scale-105 md:text-left">Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={
-                    clsx("bg-gray-900 fixed top-[12vh] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 md:static md:flex-row md:w-full md:h-auto md:bg-transparent md:duration-[0ms]", State ? "w-[180px]" : "w-0")
+                    clsx("bg-gray-900 fixed top-[12vh] z-[999] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 md:static md:flex-row md:w-full md:h-auto md:bg-transparent md:duration-[0ms]", State ? "w-[180px]" : "w-0")
                 }>
                     <ItemUl state={State} link="home">
                         Home

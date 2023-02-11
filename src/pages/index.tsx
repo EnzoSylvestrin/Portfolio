@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
+import dynamic from "next/dynamic";
+
 import Header from "@/components/sections/Header/Header";
 import HomeComponent from "@/components/sections/Home/HomeComponent";
 import About from "@/components/sections/About/About";
@@ -9,7 +11,11 @@ import Footer from "@/components/sections/Footer/Footer";
 import Contact from "@/components/sections/Contact/Contact";
 import UpComponent from "@/components/UpComponent";
 import Services from "@/components/sections/Services/Services";
-import Projects from "@/components/sections/Projects/Projects";
+
+const Projects = dynamic(
+  () => import("@/components/sections/Projects/Projects"),
+  { ssr: false }
+);
 
 export default function Home() {
 
