@@ -28,8 +28,8 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
     useEffect(() => {
         let theme: string | null = localStorage.getItem('theme');
         setDarkMode(theme == null ? true : theme == 'dark' ? true : false);
-        document.body.style.setProperty('--bgColor', theme != "dark" ? 'rgb(229 231 235)' : 'rgb(24 24 27)');
-        document.body.style.setProperty('--inputColor', theme != "dark" ? 'rgb(209 213 219)' : 'rgb(31 41 55)');
+        document.body.style.setProperty('--bgColor', theme != "light" ? 'rgb(24 24 27)' : 'rgb(229 231 235)');
+        document.body.style.setProperty('--inputColor', theme != "light" ? 'rgb(31 41 55)' : 'rgb(209 213 219)');
     }, []);
 
     return (
