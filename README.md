@@ -2,7 +2,7 @@
   💻<br /><a href="https://portfolio-enzosylvestrin.vercel.app">Portfólio - Enzo Sylvestrin</a>
 </h1>
 
-![Resultado final do projeto](img-preview.png)
+![Resultado final do projeto](img-app.png)
 
 <h4 align="center"><a href="https://portfolio-enzosylvestrin.vercel.app">Clique para visitar o projeto</a></h4>
 
@@ -14,7 +14,6 @@ O site é composto por sete seções:
 - **Sobre:** Descrição dizendo um pouco sobre quem eu sou;
 - **Skills:** Seção que mostra as minhas habilidades;
 - **Serviços:** Exibe através de cards os diferentes serviços em que possuo conhecimentos;
-- **Certificados:** Meus certificados;
 - **Projetos:** Apresenta alguns projetos desenvolvidos e com link direto para os respectivos códigos no GitHub;
 - **Contato:** Formas de entrar em contato comigo, incluindo um formulário para me enviar um email;
 
