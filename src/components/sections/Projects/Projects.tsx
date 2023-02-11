@@ -8,7 +8,7 @@ import MoveStats from '../../../assets/moveImg.png';
 import PokeStack from '../../../assets/img-app.png';
 import Sorteio from '../../../assets/Sorteio.png'
 
-import AkameWiki from '../../../assets/Akame-Wiki.png';
+import AkameWiki from '../../../assets/Akame-wiki.png';
 
 import { ProjectCardProps, ProjectCards } from "./ProjectsStyled";
 
