@@ -1,5 +1,7 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 
+import { motion } from 'framer';
+
 import Typewriter from "typewriter-effect";
 
 import Button from "../../Button/Button";
@@ -10,7 +12,13 @@ const HomeComponent = () => {
     return (
         <>
             <div className="h-screen w-full flex items-center justify-center pt-[12vh] p-0 xs:p-4 sm:px-12 relative" id='home'>
-                <div className="flex items-center mt-12 flex-col h-full w-full justify-center md:w-[50%] md:items-start">
+                <motion.div
+                    className="flex items-center mt-12 flex-col h-full w-full justify-center md:w-[50%] md:items-start"
+                    initial={{ x: -350, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                    viewport={{ once: true }}
+                >
                     <Heading asChild size='md' className="mb-6 text-center md:text-start sm:text-xlg">
                         <h1>
                             Seja bem vindo!<br />
@@ -29,8 +37,14 @@ const HomeComponent = () => {
                     />
 
                     <Button href="https://www.linkedin.com/in/enzo-sylvestrin-336b71221/" text="Encontre-me" styles="mt-8 text-lg md:text-xl" />
-                </div>
-                <div className="w-[50%] items-center justify-center hidden md:flex">
+                </motion.div>
+                <motion.div
+                    className="w-[50%] items-center justify-center hidden md:flex"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                    viewport={{ once: true }}
+                >
                     <Player
                         autoplay
                         loop
@@ -38,7 +52,7 @@ const HomeComponent = () => {
                         style={{ height: 420, width: 420 }}
                     >
                     </Player>
-                </div>
+                </motion.div>
             </div>
 
         </>

@@ -10,7 +10,7 @@ import { LinearGradientIcon } from '@/components/CommomComponents';
 export const ItemUl = ({ children, state, link }: { children: string, state: boolean, link: string }) => {
     return (
         <li className={
-            clsx("text-lg text-gray-200 cursor-pointer tracking-wider item-ul duration-250 transition-all mt-2 md:opacity-100 " +
+            clsx("text-lg text-gray-200 cursor-pointer tracking-wider item-ul duration-250 transition-all mt-2 mdlg:opacity-100 " +
                 "after:block after:h-0 after:mr-1 after:scale-0 after:transition-transform after:duration-[320ms] after:ease-in-out " +
                 "hover:after:scale-100 hover:after:h-auto", state ? 'opacity-100' : 'opacity-0')
         }>
@@ -31,7 +31,7 @@ export const ThemeComponent = ({ dark, id, ...rest }: LiHTMLAttributes<HTMLLIEle
 
 export const MenuComponent = ({ state, ...rest }: HTMLAttributes<HTMLDivElement> & { state: boolean }) => {
     return (
-        <div className="absolute top right-[5%] transition-all flex items-center justify-center duration-300 hover:scale-110 md:hidden" {...rest}>
+        <div className="absolute top right-[5%] transition-all flex items-center justify-center duration-300 hover:scale-110 mdlg:hidden" {...rest}>
             {
                 <LinearGradientIcon Icon={state ? HiXMark : AiOutlineMenu} id={'3'} size={22} />
             }

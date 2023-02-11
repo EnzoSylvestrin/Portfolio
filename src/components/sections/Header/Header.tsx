@@ -34,11 +34,11 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
 
     return (
         <header id="#top">
-            <nav className="w-full fixed z-[999] bg-neutral-800 px-12 flex items-center justify-center h-[12vh] min-h-[4rem] md:justify-between">
-                <a href="#top" className="text-center text-transparent text-2xl bg-clip-text gradient-text transition-all duration-300 hover:scale-105 md:text-left">Enzo</a>
+            <nav className="w-full fixed z-[999] bg-neutral-800 px-12 flex items-center justify-center h-[12vh] min-h-[4rem] mdlg:justify-between">
+                <a href="#top" className="text-center text-transparent text-2xl bg-clip-text gradient-text transition-all duration-300 hover:scale-105 mdlg:text-left">Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={
-                    clsx("bg-gray-900 fixed top-[12vh] z-[999] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 md:static md:flex-row md:w-full md:h-auto md:bg-transparent md:duration-[0ms]", State ? "w-[180px]" : "w-0")
+                    clsx("bg-gray-900 fixed top-[12vh] z-[999] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 mdlg:static mdlg:flex-row mdlg:w-full mdlg:h-auto mdlg:bg-transparent mdlg:duration-[0ms]", State ? "w-[180px]" : "w-0")
                 }>
                     <ItemUl state={State} link="home">
                         Home
@@ -59,7 +59,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                         Contato
                     </ItemUl>
                     <div className={
-                        clsx('flex items-center justify-center gap-6 absolute right-0 bottom-5 w-full md:hidden', State ? 'visible' : 'invisible')
+                        clsx('flex items-center justify-center gap-6 absolute right-0 bottom-5 w-full mdlg:hidden', State ? 'visible' : 'invisible')
                     }>
                         <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={"0"} />
                         <li className="text-xxl">
@@ -68,9 +68,9 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                             </a>
                         </li>
                     </div>
-                    <div className="w-[2px] h-full border-gradient-animate absolute left-0 make-animate bottom-0 md:hidden"></div>
+                    <div className="w-[2px] h-full border-gradient-animate absolute left-0 make-animate bottom-0 mdlg:hidden"></div>
                 </ul>
-                <ul className="hidden items-center justify-center gap-2 text-gray-200 md:flex mb-1">
+                <ul className="hidden items-center justify-center gap-2 text-gray-200 mdlg:flex mb-1">
                     <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={'2'} />
                     <li className="text-xxl transition-all duration-300 hover:scale-110">
                         <a href="https://github.com/EnzoSylvestrin" rel="noopener noreferrer" target="_blank">

@@ -1,4 +1,6 @@
-import { HTMLAttributes, useRef } from "react";
+import { useRef } from "react";
+
+import { motion } from 'framer';
 
 import { FaUserAlt } from "react-icons/fa";
 import { MdEmail, MdLocationOn } from 'react-icons/md';
@@ -23,7 +25,13 @@ const Contact = () => {
             <div>
                 <TitleSection title="Contato" />
                 <div className="flex items-center flex-col justify-center w-full p-4 pb-2 md:flex-row lg:p-6">
-                    <div className="w-full flex flex-col my-6 items-center gap-3 md:items-start md:my-0 md:pr-6">
+                    <motion.div
+                        className="w-full flex flex-col my-6 items-center gap-3 md:items-start md:my-0 md:pr-6"
+                        initial={{ y: 200, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.4 }}
+                        viewport={{ once: true }}
+                    >
                         <Heading className="text-center md:text-start" size="md" gradient={true}>Entre em contato comigo</Heading>
                         <Text className="text-center px-4 sm:px-12 md:text-start md:px-0" size="md">Caso queira entrar em contato comigo me mande uma mensagem, eu vou adorar 💖.</Text>
                         <div className="flex flex-col gap-4 items-center justify-start mt-8">
@@ -44,8 +52,17 @@ const Contact = () => {
                                 <Text className="text-md xs:text-lg" size="md">Jundiaí, São Paulo - Brasil</Text>
                             </div>
                         </div>
-                    </div>
-                    <form action="https://formsubmit.co/fecfce57d3e403900dad1688f2d9c317" ref={Form} method="POST" className="w-full flex flex-col items-center justify-center gap-5 px-2 xs:px-6">
+                    </motion.div>
+                    <motion.form
+                        action="https://formsubmit.co/fecfce57d3e403900dad1688f2d9c317"
+                        ref={Form}
+                        method="POST"
+                        className="w-full flex flex-col items-center justify-center gap-5 px-2 xs:px-6"
+                        initial={{ scale: 0.90, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.4 }}
+                        viewport={{ once: true }}
+                    >
                         <input type="hidden" name="_next" value="https://portfolio-enzosylvestrin.vercel.app" />
                         <input type="hidden" name="_template" value="box" />
                         <input type="hidden" name="_autoresponse" value="Recebi sua mensagem, muito obrigado por entrar em contato! Responderei o mais rápido possível..." />
@@ -86,7 +103,7 @@ const Contact = () => {
                             </Input.Root>
                         </label>
                         <Button text="Enviar" styles="text-xl mt-4" onClick={HandleSubmit} />
-                    </form>
+                    </motion.form>
                 </div>
             </div>
         </ContainerCommom >

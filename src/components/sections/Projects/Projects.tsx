@@ -1,17 +1,19 @@
+import { Dispatch, SetStateAction, useEffect } from "react";
+
 import { Carousel } from "react-carousel3";
 import MediaQuery from "react-responsive";
+
+import { motion } from 'framer';
 
 import { TitleSection } from "@/components/CommomComponents";
 import ContainerCommom from "@/components/ContainerCommom";
 
 import MoveStats from '../../../assets/moveImg.png';
 import PokeStack from '../../../assets/img-app.png';
-import Sorteio from '../../../assets/Sorteio.png'
-
+import Sorteio from '../../../assets/Sorteio.png';
 import AkameWiki from '../../../assets/Akame-wiki.png';
 
 import { ProjectCardProps, ProjectCards } from "./ProjectsStyled";
-import { Dispatch, SetStateAction, useEffect } from "react";
 
 type breakPointsProps = {
     breakPoint: number,
@@ -75,7 +77,13 @@ const Projects = ({ loading }: { loading?: Dispatch<SetStateAction<boolean>> }) 
         <ContainerCommom id="Projetos">
             <div>
                 <TitleSection title="Projetos" />
-                <div className="flex items-center justify-center my-16">
+                <motion.div
+                    className="flex items-center justify-center my-16"
+                    initial={{ scale: 0.90, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                    viewport={{ once: true }}
+                >
                     {
                         BreakPoints.map((item, i) => {
                             return <MediaQuery key={i} maxWidth={BreakPoints.length - 1 == i ? 9999 : BreakPoints[i + 1].breakPoint} minWidth={item.breakPoint}>
@@ -96,7 +104,7 @@ const Projects = ({ loading }: { loading?: Dispatch<SetStateAction<boolean>> }) 
                             </MediaQuery>
                         })
                     }
-                </div>
+                </motion.div>
             </div>
         </ContainerCommom>
     );

@@ -1,5 +1,7 @@
 import { MouseEvent, useRef, useState } from "react";
 
+import { motion } from 'framer';
+
 import { FaJava, FaPython, FaReact } from "react-icons/fa";
 import { SiCsharp, SiNextdotjs, SiNodedotjs, SiTypescript } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
@@ -74,7 +76,13 @@ const Skills = () => {
             <div>
                 <TitleSection title="Skills" className="mb-3" />
                 <div className="flex flex-col flex-nowrap w-full sm:flex-row">
-                    <div className="w-[100%] flex flex-col items-center justify-center my-3 sm:my-0 sm:w-[30%]">
+                    <motion.div
+                        className="w-[100%] flex flex-col items-center justify-center my-3 sm:my-0 sm:w-[30%]"
+                        initial={{ x: -200, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.4 }}
+                        viewport={{ once: true }}
+                    >
                         <Heading size="lg" gradient={true} className="text-center" asChild={true}>
                             <h1 ref={Title}>Skill</h1>
                         </Heading>
@@ -82,8 +90,14 @@ const Skills = () => {
                         <Text size="lg" className="text-center" asChild={true}>
                             <p ref={Description}>Passe o mouse ou clique em cima de uma skill para ver o tempo</p>
                         </Text>
-                    </div>
-                    <div className="w-[100%] grid grid-cols-1 justify-center align-center p-2 gap-6 mt-6 xs:grid-cols-2 sm:grid-cols-2 sm:p-2 sm:w-[70%] md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                    </motion.div>
+                    <motion.div
+                        className="w-[100%] grid grid-cols-1 justify-center align-center p-2 gap-6 mt-6 xs:grid-cols-2 sm:grid-cols-2 sm:p-2 sm:w-[70%] md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+                        initial={{ scale: 0.90, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.4 }}
+                        viewport={{ once: true }}
+                    >
                         {
                             Skills.map(Skill => {
                                 return <Card
@@ -94,7 +108,7 @@ const Skills = () => {
                                 />
                             })
                         }
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </ContainerCommom>
