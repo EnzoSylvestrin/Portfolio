@@ -54,7 +54,7 @@ const Skills = () => {
         if (Title.current != null && Description.current != null) {
             Title.current.innerHTML = e.currentTarget.id;
             let time = Skills.find(skill => skill.id === e.currentTarget.id)?.time;
-            let description = `${ConvertTime(time)} ${language === "Português" ? "de experiência com essa habilidade!" : "of expirience with this skill"}`;
+            let description = `${ConvertTime(time)} ${language === "Português" ? "de experiência com essa habilidade!" : "of experience with this skill"}`;
             Description.current.innerHTML = description;
             setProgress(time ? Math.floor(time * maxProgress / maxTime) : 0);
         }
