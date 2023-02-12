@@ -35,7 +35,6 @@ const HomeComponent = () => {
                                     "Seja bem vindo!"
                             }
                         </h1>
-
                     </Heading>
                     <Heading size='md' className="mb-6 text-center md:text-start sm:text-xlg">
                         <h2>
@@ -44,7 +43,7 @@ const HomeComponent = () => {
                                     ?
                                     "My name is Enzo"
                                     :
-                                    "meu nome é Enzo"
+                                    "Meu nome é Enzo"
                             }
                         </h2>
                     </Heading>
