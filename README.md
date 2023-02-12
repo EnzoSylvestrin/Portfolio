@@ -21,7 +21,7 @@ O site é composto por sete seções:
 
 - No menu o usuário consegue alterar o tema clicando no ícone da lua ou do sol;
 - É possível alterar a cor do degradê do site, clicando sobre as cores na tela inicial.
-
+- É possivel alterar o idioma do site clicando sobre o botão na tela inicial
 ---
 
 ## 💼 Tecnologias utilizadas
