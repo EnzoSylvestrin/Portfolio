@@ -1,4 +1,4 @@
-import { HTMLAttributes, LiHTMLAttributes } from 'react';
+import { HTMLAttributes, LiHTMLAttributes, ReactNode } from 'react';
 
 import clsx from 'clsx';
 
@@ -7,7 +7,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { HiXMark } from 'react-icons/hi2';
 import { LinearGradientIcon } from '@/components/CommomComponents';
 
-export const ItemUl = ({ children, state, link }: { children: string, state: boolean, link: string }) => {
+export const ItemUl = ({ children, state, link }: { children: ReactNode, state: boolean, link: string }) => {
     return (
         <li className={
             clsx("text-lg text-gray-200 cursor-pointer tracking-wider item-ul duration-250 transition-all mt-2 mdlg:opacity-100 " +

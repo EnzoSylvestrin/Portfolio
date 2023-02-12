@@ -13,7 +13,10 @@ const About = () => {
     return (
         <ContainerCommom id="Sobre">
             <div>
-                <TitleSection title="Sobre mim" />
+                <TitleSection title={{
+                    English: "About me",
+                    Portugues: "Sobre mim"
+                }} />
                 <div className="flex items-center justify-center w-full flex-col lg:flex-row">
                     <motion.div
                         className='flex w-full items-center justify-center lg:w-[45%]'
@@ -31,14 +34,28 @@ const About = () => {
                         transition={{ duration: 0.4 }}
                         viewport={{ once: true }}
                     >
-                        <Heading size="lg" className='mb-4'>Quem sou eu?</Heading>
-                        <Text className='px-0 text-center sm:px-4' size='lg'>
-                            Eu sou de Jundiaí SP. atualmente estou sou estudante de ciência da computação
-                            na UNIP, Tenho experiência na área, sou apaixonado por automação de sistemas e atuo também
-                            como freelancer. Para saber mais sobre minhas habilidades e sobre minha carreira
-                            clique e faça o download do meu curriculo.
-                        </Text>
-                        <Button href={'/Curriculo-Enzo.pdf'} text='Currículo' styles="text-xl mt-6" />
+                        <Heading
+                            size="lg"
+                            className='mb-4'
+                            text={{
+                                English: 'Who am i?',
+                                Portugues: 'Quem sou eu?'
+                            }}
+                        />
+                        <Text
+                            className='px-0 text-center sm:px-4'
+                            size='lg'
+                            text={{
+                                English: `I am from Jundiaí, SP. Currently, I am a computer science student at UNIP. 
+                                I have experience in the field, I am passionate about system automation and I also work 
+                                as a freelancer. To learn more about my skills and my career, click and download my resume.`,
+                                Portugues: `Eu sou de Jundiaí SP. atualmente estou sou estudante de ciência da computação
+                                na UNIP, Tenho experiência na área, sou apaixonado por automação de sistemas e atuo também
+                                como freelancer. Para saber mais sobre minhas habilidades e sobre minha carreira
+                                clique e faça o download do meu curriculo.`
+                            }}
+                        />
+                        <Button href={'/Curriculo-Enzo.pdf'} text={{ Portugues: "Currículo", English: "Resume" }} styles="text-xl mt-6" />
                     </motion.div>
                 </div>
             </div>

@@ -1,3 +1,5 @@
+import LanguageComponent from '@/components/Language/LanguageComponent';
+import { useLanguage } from '@/components/Language/LanguageProvider';
 import { Player } from '@lottiefiles/react-lottie-player';
 
 import { motion } from 'framer';
@@ -9,6 +11,9 @@ import ContainerColors from '../../ColorPicker/ContainerColors';
 import Heading from '../../Heading';
 
 const HomeComponent = () => {
+
+    const { language } = useLanguage();
+
     return (
         <>
             <div className="h-screen w-full flex items-center justify-center pt-[12vh] p-0 xs:p-4 sm:px-12 relative" id='home'>
@@ -19,11 +24,29 @@ const HomeComponent = () => {
                     transition={{ duration: 0.4 }}
                     viewport={{ once: true }}
                 >
-                    <Heading asChild size='md' className="mb-6 text-center md:text-start sm:text-xlg">
+                    <LanguageComponent />
+                    <Heading size='md' className="text-center md:text-start sm:text-xlg">
                         <h1>
-                            Seja bem vindo!<br />
-                            meu nome é Enzo
+                            {
+                                language === "English"
+                                    ?
+                                    "Welcome"
+                                    :
+                                    "Seja bem vindo!"
+                            }
                         </h1>
+
+                    </Heading>
+                    <Heading size='md' className="mb-6 text-center md:text-start sm:text-xlg">
+                        <h2>
+                            {
+                                language === "English"
+                                    ?
+                                    "My name is Enzo"
+                                    :
+                                    "meu nome é Enzo"
+                            }
+                        </h2>
                     </Heading>
                     <ContainerColors />
                     <Typewriter
@@ -36,7 +59,7 @@ const HomeComponent = () => {
                         }}
                     />
 
-                    <Button href="https://www.linkedin.com/in/enzo-sylvestrin-336b71221/" text="Encontre-me" styles="mt-8 text-lg md:text-xl" />
+                    <Button href="https://www.linkedin.com/in/enzo-sylvestrin-336b71221/" text={{ Portugues: "Encontre-me", English: "Find me" }} styles="mt-8 text-lg md:text-xl" />
                 </motion.div>
                 <motion.div
                     className="w-[50%] items-center justify-center hidden md:flex"

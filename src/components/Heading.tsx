@@ -1,12 +1,26 @@
-import { Slot } from '@radix-ui/react-slot';
+import { ReactNode } from 'react';
 import { clsx } from 'clsx';
-import { TextProps } from './Text';
 
-export default function Heading({ size = 'md', children, asChild, className, useDarkMode = true, gradient = false }: TextProps) {
-    const Comp = asChild ? Slot : 'h2';
+import { Slot } from '@radix-ui/react-slot';
+
+import { useLanguage } from './Language/LanguageProvider';
+import { LanguageProps } from './Text';
+
+type HeadingProps = {
+    size?: 'sm' | 'md' | 'lg' | 'xl',
+    children?: ReactNode,
+    align?: 'left' | 'center' | 'right',
+    className?: string,
+    useDarkMode?: boolean,
+    gradient?: boolean,
+    text?: LanguageProps
+}
+
+export default function Heading({ size = 'md', text, children, className, useDarkMode = true, gradient = false }: HeadingProps) {
+    const { language } = useLanguage()
 
     return (
-        <Comp
+        <Slot
             className={clsx(
                 {
                     'text-xl': size === 'sm',
@@ -19,7 +33,21 @@ export default function Heading({ size = 'md', children, asChild, className, use
                 className
             )}
         >
-            {children}
-        </Comp>
+            {
+                children != null
+                    ?
+                    children
+                    :
+                    <h2>
+                        {
+                            language === "English"
+                                ?
+                                text?.English
+                                :
+                                text?.Portugues
+                        }
+                    </h2>
+            }
+        </Slot>
     )
 }

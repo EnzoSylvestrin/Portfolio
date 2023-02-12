@@ -12,6 +12,7 @@ import Contact from "@/components/sections/Contact/Contact";
 import UpComponent from "@/components/UpComponent";
 import Services from "@/components/sections/Services/Services";
 import LoadingComponent from "@/components/Loading/LoadingComponent";
+import { LanguageProvider } from "@/components/Language/LanguageProvider";
 
 const Projects = dynamic(
   () => import("@/components/sections/Projects/Projects"),
@@ -39,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <LanguageProvider>
       <Header setTheme={setTheme} />
       <section className={clsx("transition-all duration-300", Theme == 'light' ? 'bg-gray-200' : 'dark bg-zinc-900')}>
         <UpComponent />
@@ -60,6 +61,6 @@ export default function Home() {
         <Contact />
       </section>
       <Footer theme={Theme} />
-    </>
+    </LanguageProvider>
   )
 }

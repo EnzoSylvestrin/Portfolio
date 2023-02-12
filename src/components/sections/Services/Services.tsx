@@ -13,7 +13,10 @@ const Services = () => {
     return (
         <ContainerCommom id="Servicos">
             <div>
-                <TitleSection title="Serviços" className="mb-4" />
+                <TitleSection title={{
+                    English: "Services",
+                    Portugues: "Serviços"
+                }} className="mb-4" />
                 <motion.div
                     className="grid grid-cols-1 gap-6 w-full px-3 content-center mt-4 sm:grid-cols-2 md:grid-cols-3 lg:px-8"
                     initial={{ x: 200, opacity: 0 }}
@@ -23,18 +26,18 @@ const Services = () => {
                 >
                     <ServiceCard
                         icon={BsGearFill}
-                        title="Automação"
-                        text="Criação de bots e automação de tarefas repetitivas."
+                        titleElement={{ Portugues: "Automação", English: "Automation" }}
+                        text={{ Portugues: "Criação de bots e automação de tarefas repetitivas.", English: "Creation of bots and automation of repetitive tasks" }}
                     />
                     <ServiceCard
                         icon={RiCodeSSlashFill}
-                        title="Criação de sites"
-                        text="Construção do design e funcionamento de sites."
+                        titleElement={{ Portugues: "Criação de sites", English: "Website creation" }}
+                        text={{ Portugues: "Construção do design e funcionamento de sites.", English: "Construction of website design and functionality" }}
                     />
                     <ServiceCard
                         icon={MdPhoneAndroid}
-                        title="Criação de aplicativos"
-                        text="Desenvolvimento de aplicativos."
+                        titleElement={{ Portugues: "Criação de apps", English: "Apps creation" }}
+                        text={{ Portugues: "Desenvolvimento de aplicativos.", English: "Development of applications." }}
                     />
                 </motion.div>
             </div>

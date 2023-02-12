@@ -1,22 +1,28 @@
 import { Slot } from '@radix-ui/react-slot';
 import { clsx } from 'clsx';
 import { ReactNode } from 'react';
+import { useLanguage } from './Language/LanguageProvider';
 
 export type TextProps = {
-    size?: 'sm' | 'md' | 'lg' | 'xl';
-    children: ReactNode;
+    size?: 'sm' | 'md' | 'lg' | 'xl',
+    children?: ReactNode,
     align?: 'left' | 'center' | 'right',
-    asChild?: boolean;
-    className?: string;
-    useDarkMode?: boolean;
-    gradient?: boolean;
+    className?: string,
+    useDarkMode?: boolean,
+    gradient?: boolean,
+    text?: LanguageProps
 }
 
-export default function Text({ size = 'md', children, asChild, className, useDarkMode = true, gradient = false }: TextProps) {
-    const Comp = asChild ? Slot : 'p';
+export type LanguageProps = {
+    English: string,
+    Portugues: string,
+}
+
+export default function Text({ size = 'md', text, children, className, useDarkMode = true, gradient = false }: TextProps) {
+    const { language } = useLanguage()
 
     return (
-        <Comp
+        <Slot
             className={clsx(
                 "text-stone-900",
                 {
@@ -27,10 +33,24 @@ export default function Text({ size = 'md', children, asChild, className, useDar
                 },
                 useDarkMode ? 'dark:text-white' : '',
                 gradient ? 'gradient-text bg-clip-text' : '',
-                className
+                className,
             )}
         >
-            {children}
-        </Comp>
+            {
+                children != null
+                    ?
+                    children
+                    :
+                    <p>
+                        {
+                            language === "English"
+                                ?
+                                text?.English
+                                :
+                                text?.Portugues
+                        }
+                    </p>
+            }
+        </Slot>
     )
 }

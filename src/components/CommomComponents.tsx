@@ -1,5 +1,7 @@
 import { IconBaseProps, IconType } from 'react-icons/lib';
 import Heading from './Heading';
+import { useLanguage } from './Language/LanguageProvider';
+import { LanguageProps } from './Text';
 
 type GradientIcon = IconBaseProps & {
     Icon: IconType,
@@ -20,8 +22,15 @@ export const LinearGradientIcon = ({ Icon, id, size, ...rest }: GradientIcon) =>
     );
 }
 
-export const TitleSection = ({ title, className = "" }: { title: string, className?: string }) => {
+export const TitleSection = ({ title, className = "" }: { title: LanguageProps, className?: string }) => {
     return (
-        <Heading size="xl" gradient={true} className={`text-center ${className}`}>{title}</Heading>
+        <Heading text={{
+            English: title.English,
+            Portugues: title.Portugues
+        }}
+            size="xl"
+            gradient={true}
+            className={`text-center ${className}`}
+        />
     );
 }

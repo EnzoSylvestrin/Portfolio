@@ -27,7 +27,7 @@ const Footer = ({ theme }: { theme: 'dark' | 'light' }) => {
                         color={"#14ade9"}
                     />
                 </div>
-                <Text size="lg">Enzo Sylvestrin 2023 ©</Text>
+                <Text text={{ Portugues: "Enzo Sylvestrin 2023 ©", English: "Enzo Sylvestrin 2023 ©" }} size="lg" />
             </div>
         </footer>
     );

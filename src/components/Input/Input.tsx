@@ -3,6 +3,8 @@ import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 
 import clsx from 'clsx';
+import { LanguageProps } from '../Text';
+import { useLanguage } from '../Language/LanguageProvider';
 
 export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> { }
 
@@ -34,24 +36,48 @@ function InputIcon({ children }: TextInputProps) {
     )
 }
 
-export interface TextInputInputProps extends InputHTMLAttributes<HTMLInputElement> { }
+export interface TextInputInputProps extends InputHTMLAttributes<HTMLInputElement> {
+    PlaceHolderComponent: LanguageProps
+}
 
-function InputInput(props: TextInputInputProps) {
+function InputInput({ PlaceHolderComponent, ...rest }: TextInputInputProps) {
+
+    const { language } = useLanguage();
+
     return (
         <input
             className='bg-transparent flex-1 caret-fuchsia-500 text-stone-900 text-xs outline-none placeholder:text-gray-500 dark:text-white dark:placeholder:text-gray-400'
-            {...props}
+            placeholder={
+                language === "English"
+                    ?
+                    PlaceHolderComponent?.English
+                    :
+                    PlaceHolderComponent?.Portugues
+            }
+            {...rest}
         />
     )
 }
 
-export interface InputAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> { }
+export interface InputAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+    PlaceHolderComponent: LanguageProps
+}
 
-function InputArea(props: InputAreaProps) {
+function InputArea({ PlaceHolderComponent, ...rest }: InputAreaProps) {
+
+    const { language } = useLanguage();
+
     return (
         <textarea
             className="resize-y max-h-[300px] min-h-[120px] caret-fuchsia-500 bg-transparent w-full py-[6px] placeholder:text-gray-500 text-stone-900 h-[120px] px-2 outline-0 dark:placeholder:text-gray-400 dark:text-white xs:resize-none"
-            {...props}
+            placeholder={
+                language === "English"
+                    ?
+                    PlaceHolderComponent?.English
+                    :
+                    PlaceHolderComponent?.Portugues
+            }
+            {...rest}
         />
     )
 }

@@ -1,16 +1,20 @@
-import clsx from "clsx";
 import { ButtonHTMLAttributes } from "react";
+import clsx from "clsx";
 
+import { useLanguage } from "../Language/LanguageProvider";
 
+import { LanguageProps } from "../Text";
 
 type ButtonProps = {
-    text: string,
+    text: LanguageProps,
     styles?: string,
     href?: string,
 };
 
 const Button = ({ text, styles, href, ...rest }: ButtonHTMLAttributes<HTMLButtonElement> & ButtonProps) => {
     const Comp = href ? 'a' : 'p';
+
+    const { language } = useLanguage()
 
     return (
         <button className={clsx(
@@ -20,7 +24,13 @@ const Button = ({ text, styles, href, ...rest }: ButtonHTMLAttributes<HTMLButton
             {...rest}
         >
             <Comp href={href} className="bg-gray-200 dark:bg-neutral-900 px-2 py-1 rounded-md w-full h-full transition-[background-color] duration-300" rel="noopener noreferrer" target="_blank">
-                {text}
+                {
+                    language === "English"
+                        ?
+                        text?.English
+                        :
+                        text?.Portugues
+                }
             </Comp>
         </button>
     );

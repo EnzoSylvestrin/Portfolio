@@ -33,36 +33,36 @@ const Projects = ({ loading }: { loading?: Dispatch<SetStateAction<boolean>> }) 
     const ProjectsCards: ProjectCardProps[] = [
         {
             imgSrc: MoveStats.src,
-            title: "Move Stats",
-            description: "Projeto finalista na FEBRACE 2022 desenvolvido para facilitar na locomoção de deficientes visuais.",
+            titleComponent: { Portugues: "Move Stats", English: "Move Stats" },
+            description: { Portugues: "Projeto finalista na FEBRACE 2022 desenvolvido para facilitar na locomoção de deficientes visuais.", English: "FEBRACE 2022 finalist project developed to facilitate transportation for visually impaired individuals." },
             Repo: "https://github.com/EnzoSylvestrin/Move-Stats",
             Site: "https://movestats.vercel.app"
         },
         {
             imgSrc: PokeStack.src,
-            title: "PokeStack",
-            description: "Pokedex criada com next e typeScript com autenticação de usuário.",
+            titleComponent: { Portugues: "PokeStack", English: "PokeStack" },
+            description: { Portugues: "Pokedex criada com Next e TypeScript com autenticação de usuário.", English: "Pokedex made with Next and TypeScript contains user authentication" },
             Repo: "https://github.com/EnzoSylvestrin/PokeStack",
             Site: "https://poke-stack.vercel.app"
         },
         {
             imgSrc: AkameWiki.src,
-            title: "Akame Wiki",
-            description: "Site feito para aprimorar meus conhecimentos com react e consumo de APIs.",
+            titleComponent: { Portugues: "Akame Wiki", English: "Akame Wiki" },
+            description: { Portugues: "Site feito para aprimorar meus conhecimentos com react e consumo de APIs.", English: "Website created to enhance my skills with React and API consumption." },
             Repo: "https://github.com/EnzoSylvestrin/Akame-Wiki",
             Site: "https://enzosylvestrin.github.io/Akame-Wiki/"
         },
         {
             imgSrc: Sorteio.src,
-            title: "Sorteio",
-            description: "Site simples feito com Next para sorteio de números!",
+            titleComponent: { Portugues: "Sorteio", English: "Draw" },
+            description: { Portugues: "Site simples feito com Next para sorteio de números!", English: "Simple website made with Next for number drawing!" },
             Repo: "https://github.com/EnzoSylvestrin/sorteio",
             Site: "https://sorteio-plum.vercel.app"
         },
         {
             imgSrc: "https://enotas.com.br/blog/wp-content/uploads/2021/02/GitHub.jpg",
-            title: "Github",
-            description: "Acesse meu github para ver todos meus os projetos.",
+            titleComponent: { Portugues: "Github", English: "Github" },
+            description: { Portugues: "Acesse meu github para ver todos meus os projetos.", English: "Visit my Github to see all of my projects" },
             Site: "https://github.com/EnzoSylvestrin"
         }
     ]
@@ -76,7 +76,10 @@ const Projects = ({ loading }: { loading?: Dispatch<SetStateAction<boolean>> }) 
     return (
         <ContainerCommom id="Projetos">
             <div>
-                <TitleSection title="Projetos" />
+                <TitleSection title={{
+                    English: "Projects",
+                    Portugues: "Projetos"
+                }} />
                 <motion.div
                     className="flex items-center justify-center my-16"
                     initial={{ scale: 0.90, opacity: 0 }}
@@ -93,7 +96,7 @@ const Projects = ({ loading }: { loading?: Dispatch<SetStateAction<boolean>> }) 
                                             return <ProjectCards
                                                 key={i}
                                                 imgSrc={item.imgSrc}
-                                                title={item.title}
+                                                titleComponent={item.titleComponent}
                                                 description={item.description}
                                                 Repo={item.Repo}
                                                 Site={item.Site}

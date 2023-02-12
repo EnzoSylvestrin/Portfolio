@@ -7,11 +7,14 @@ import { AiOutlineGithub } from 'react-icons/ai';
 import { ItemUl, MenuComponent, ThemeComponent } from './HeaderStyled';
 
 import { LinearGradientIcon } from '@/components/CommomComponents';
+import { useLanguage } from '@/components/Language/LanguageProvider';
 
 const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dark">> }) => {
 
     const [DarkMode, setDarkMode] = useState<boolean>(true);
     const [State, setState] = useState<boolean>(false);
+
+    const { language } = useLanguage();
 
     const ToggleMode = () => {
         setDarkMode(!DarkMode);
@@ -44,19 +47,43 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                         Home
                     </ItemUl>
                     <ItemUl state={State} link="Sobre">
-                        Sobre
+                        {
+                            language === "English"
+                                ?
+                                "About"
+                                :
+                                "Sobre"
+                        }
                     </ItemUl>
                     <ItemUl state={State} link="Skills">
                         Skills
                     </ItemUl>
                     <ItemUl state={State} link="Servicos">
-                        Serviços
+                        {
+                            language === "English"
+                                ?
+                                "Services"
+                                :
+                                "Serviços"
+                        }
                     </ItemUl>
                     <ItemUl state={State} link="Projetos">
-                        Projetos
+                        {
+                            language === "English"
+                                ?
+                                "Projects"
+                                :
+                                "Projetos"
+                        }
                     </ItemUl>
                     <ItemUl state={State} link="Contato">
-                        Contato
+                        {
+                            language === "English"
+                                ?
+                                "Contact"
+                                :
+                                "Contato"
+                        }
                     </ItemUl>
                     <div className={
                         clsx('flex items-center justify-center gap-6 absolute right-0 bottom-5 w-full mdlg:hidden', State ? 'visible' : 'invisible')
