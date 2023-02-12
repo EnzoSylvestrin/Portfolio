@@ -38,7 +38,7 @@ const About = () => {
                             size="lg"
                             className='mb-4'
                             text={{
-                                English: 'Who am i?',
+                                English: 'Who am I?',
                                 Portugues: 'Quem sou eu?'
                             }}
                         />
@@ -46,9 +46,9 @@ const About = () => {
                             className='px-0 text-center sm:px-4'
                             size='lg'
                             text={{
-                                English: `I am from Jundiaí, SP. Currently, I am a computer science student at UNIP. 
-                                I have experience in the field, I am passionate about system automation and I also work 
-                                as a freelancer. To learn more about my skills and my career, click and download my resume.`,
+                                English: `I'm from Jundiaí, SP. Currently, I'm a computer science student at UNIP. 
+                                I have experience in the field, I am passionate about automation system and I also work 
+                                as a freelancer. To learn more about my career and skills, click and download my resume.`,
                                 Portugues: `Eu sou de Jundiaí SP. atualmente estou sou estudante de ciência da computação
                                 na UNIP, Tenho experiência na área, sou apaixonado por automação de sistemas e atuo também
                                 como freelancer. Para saber mais sobre minhas habilidades e sobre minha carreira

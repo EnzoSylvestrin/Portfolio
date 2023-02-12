@@ -36,8 +36,8 @@ const Services = () => {
                     />
                     <ServiceCard
                         icon={MdPhoneAndroid}
-                        titleElement={{ Portugues: "Criação de apps", English: "Apps creation" }}
-                        text={{ Portugues: "Desenvolvimento de aplicativos.", English: "Development of applications." }}
+                        titleElement={{ Portugues: "Criação de apps", English: "Apps development" }}
+                        text={{ Portugues: "Desenvolvimento de aplicativos.", English: "Development of apps." }}
                     />
                 </motion.div>
             </div>

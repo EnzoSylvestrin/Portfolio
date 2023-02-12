@@ -30,7 +30,7 @@ const HomeComponent = () => {
                             {
                                 language === "English"
                                     ?
-                                    "Welcome"
+                                    "Welcome!"
                                     :
                                     "Seja bem vindo!"
                             }

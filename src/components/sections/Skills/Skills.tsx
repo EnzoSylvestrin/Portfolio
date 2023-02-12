@@ -112,7 +112,7 @@ const Skills = () => {
                                 {
                                     language === "English"
                                         ?
-                                        "Hover or click on a skill to see the duration."
+                                        "Hover or click on a skill to se how much experience I have with each skill"
                                         :
                                         "Passe o mouse ou clique em cima de uma skill para ver o tempo"
                                 }
