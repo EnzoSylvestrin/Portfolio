@@ -45,7 +45,7 @@ const ColorPicker = ({ id, initialValue, className, active, setActive }: ColorPi
     }
 
     return (
-        <div className={className}>
+        <div className={`${className} cursor-pointer`}>
             <div onClick={VerifyActive} style={{ color: color }}>
                 <div className='rounded-[50%] w-5 h-5' style={{ backgroundColor: color }}></div>
             </div>
