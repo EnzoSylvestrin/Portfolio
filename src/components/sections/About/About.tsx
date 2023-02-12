@@ -47,7 +47,7 @@ const About = () => {
                             size='lg'
                             text={{
                                 English: `I'm from Jundiaí, SP. Currently, I'm a computer science student at UNIP. 
-                                I have experience in the field, I am passionate about automation system and I also work 
+                                I have experience in the area, I am passionate about automation system and I also work 
                                 as a freelancer. To learn more about my career and skills, click and download my resume.`,
                                 Portugues: `Eu sou de Jundiaí SP. atualmente estou sou estudante de ciência da computação
                                 na UNIP, Tenho experiência na área, sou apaixonado por automação de sistemas e atuo também
