@@ -74,10 +74,10 @@ const Skills = () => {
         }
         else {
             if (language === "Português") {
-                finalStr = `${time} meses`
+                finalStr = `${time} meses`;
             }
             else {
-                finalStr = `${time} months`
+                finalStr = `${time} months`;
             }
         }
         return finalStr;

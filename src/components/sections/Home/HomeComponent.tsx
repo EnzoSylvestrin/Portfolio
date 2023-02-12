@@ -51,11 +51,11 @@ const HomeComponent = () => {
                     <ContainerColors />
                     <Typewriter
                         options={{
-                            strings: ['Desenvolvedor', 'FullStack', 'Junior', 'Freenlancer', 'Gamer'],
+                            strings: [language === "English" ? 'Developer' : 'Desenvolvedor', 'FullStack', 'Junior', 'Freenlancer', 'Gamer'],
                             autoStart: true,
                             loop: true,
                             cursorClassName: 'text-xlg bg-clip-text gradient-text',
-                            wrapperClassName: 'text-xlg bg-clip-text gradient-text'
+                            wrapperClassName: 'text-xlg bg-clip-text gradient-text',
                         }}
                     />
 
