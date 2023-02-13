@@ -44,10 +44,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfólio enzo</title>
+        <title>Portfólio Enzo</title>
+        <meta name="description" content="Meu porfólio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <LanguageProvider>
         <Header setTheme={setTheme} />
