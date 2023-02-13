@@ -14,6 +14,8 @@ import Services from "@/components/sections/Services/Services";
 import LoadingComponent from "@/components/Loading/LoadingComponent";
 import { LanguageProvider } from "@/components/Language/LanguageProvider";
 
+import Head from 'next/head';
+
 const Projects = dynamic(
   () => import("@/components/sections/Projects/Projects"),
   { ssr: false }
@@ -40,27 +42,35 @@ export default function Home() {
   }, []);
 
   return (
-    <LanguageProvider>
-      <Header setTheme={setTheme} />
-      <section className={clsx("transition-all duration-300", Theme == 'light' ? 'bg-gray-200' : 'dark bg-zinc-900')}>
-        <UpComponent />
-        <HomeComponent />
-        <About />
-        <Skills />
-        <Services />
-        {
-          loadingProjects
-            ?
-            <>
-              <Projects loading={setLoadingProjects} />
-              <LoadingComponent w={"50%"} h={"50%"} />
-            </>
-            :
-            <Projects />
-        }
-        <Contact />
-      </section>
-      <Footer theme={Theme} />
-    </LanguageProvider>
+    <>
+      <Head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfólio enzo</title>
+      </Head>
+      <LanguageProvider>
+        <Header setTheme={setTheme} />
+        <section className={clsx("transition-all duration-300", Theme == 'light' ? 'bg-gray-200' : 'dark bg-zinc-900')}>
+          <UpComponent />
+          <HomeComponent />
+          <About />
+          <Skills />
+          <Services />
+          {
+            loadingProjects
+              ?
+              <>
+                <Projects loading={setLoadingProjects} />
+                <LoadingComponent w={"50%"} h={"50%"} />
+              </>
+              :
+              <Projects />
+          }
+          <Contact />
+        </section>
+        <Footer theme={Theme} />
+      </LanguageProvider>
+    </>
   )
 }
