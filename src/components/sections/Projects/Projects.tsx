@@ -90,7 +90,7 @@ const Projects = ({ loading }: { loading?: Dispatch<SetStateAction<boolean>> }) 
                     {
                         BreakPoints.map((item, i) => {
                             return <MediaQuery key={i} maxWidth={BreakPoints.length - 1 == i ? 9999 : BreakPoints[i + 1].breakPoint} minWidth={item.breakPoint}>
-                                <Carousel height={item.height} width={item.width} yOrigin={item.height / 10} yRadius={item.height / 6} xOrigin={item.width / 2} xRadius={item.width / 2.3} autoPlay={true} >
+                                <Carousel height={item.height} width={item.width} yOrigin={item.height / 10} yRadius={item.height / 6} xOrigin={item.width / 2} xRadius={item.width / 2.3} autoPlay={true}>
                                     {
                                         ProjectsCards.map((item, i) => {
                                             return <ProjectCards
@@ -100,6 +100,7 @@ const Projects = ({ loading }: { loading?: Dispatch<SetStateAction<boolean>> }) 
                                                 description={item.description}
                                                 Repo={item.Repo}
                                                 Site={item.Site}
+
                                             />
                                         })
                                     }

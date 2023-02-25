@@ -17,7 +17,9 @@ export type ProjectCardProps = HTMLAttributes<HTMLDivElement> & {
 export const ProjectCards = ({ imgSrc, description, titleComponent, Repo, Site, ...rest }: ProjectCardProps) => {
     return (
         <div className='w-auto rounded-t-xl bg-gray-300 shadow-lg dark:bg-slate-900' {...rest}>
-            <img src={imgSrc} className="w-full h-24 rounded-t-xl object-cover sm:h-32 md:h-48" />
+            <a href={Site ? Site : Repo} target="_blank" rel="noopener noreferrer">
+                <img src={imgSrc} className="w-full h-24 rounded-t-xl object-cover sm:h-32 md:h-48" alt='Imagem do Projeto' />
+            </a>
             <div className='flex flex-col items-center justify-center p-4 mb-2'>
                 <Heading text={titleComponent} size='md' className='text-center mb-2' gradient={true} />
                 <Text text={description} size='md' className='text-center break-words w-52 sm:w-72' />
