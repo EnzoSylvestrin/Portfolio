@@ -26,7 +26,7 @@ const Skills = () => {
     const { language } = useLanguage();
 
     const maxProgress = 100;
-    const maxTime = 24;
+    const maxTime = 30;
 
     const Title = useRef<HTMLHeadingElement>(null);
     const Description = useRef<HTMLParagraphElement>(null);
@@ -40,14 +40,14 @@ const Skills = () => {
     const Skills: SkillsProps[] = [
         { id: "Python", icon: FaPython, time: 6 },
         { id: "Java", icon: FaJava, time: 12 },
-        { id: "JavaScript", icon: DiJavascript1, time: 12 },
-        { id: "TypeScript", icon: SiTypescript, time: 8 },
+        { id: "JavaScript", icon: DiJavascript1, time: 24 },
+        { id: "TypeScript", icon: SiTypescript, time: 12 },
         { id: "Csharp", icon: SiCsharp, time: 6 },
-        { id: "Node", icon: SiNodedotjs, time: 12 },
-        { id: "React e React Native", icon: FaReact, time: 12 },
-        { id: "Next", icon: SiNextdotjs, time: 7 },
-        { id: "CSS", icon: IoLogoCss3, time: 18 },
-        { id: "HTML", icon: AiFillHtml5, time: 18 },
+        { id: "Node", icon: SiNodedotjs, time: 18 },
+        { id: "React e React Native", icon: FaReact, time: 18 },
+        { id: "Next", icon: SiNextdotjs, time: 12 },
+        { id: "CSS", icon: IoLogoCss3, time: 24 },
+        { id: "HTML", icon: AiFillHtml5, time: 24 },
     ];
 
     const HandleHoverCard = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
