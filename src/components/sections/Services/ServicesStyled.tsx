@@ -8,7 +8,7 @@ import Heading from "@/components/Heading";
 import Text, { LanguageProps } from "@/components/Text";
 import { LinearGradientIcon } from "@/components/CommomComponents";
 
-type ServiceCardProps = HTMLAttributes<HTMLDivElement> & {
+type ServiceCardProps = {
     icon: IconType,
     titleElement: LanguageProps,
     text: LanguageProps,
