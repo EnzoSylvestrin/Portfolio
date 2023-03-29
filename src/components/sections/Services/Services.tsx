@@ -25,19 +25,19 @@ const Services = () => {
                     <ServiceCard
                         icon={BsGearFill}
                         titleElement={{ Portugues: "Automação", English: "Automation" }}
-                        x={-100}
+                        x={-200}
                         text={{ Portugues: "Criação de bots e automação de tarefas repetitivas.", English: "Creation of bots and automation of repetitive tasks" }}
                     />
                     <ServiceCard
                         icon={RiCodeSSlashFill}
                         titleElement={{ Portugues: "Criação de sites", English: "Website creation" }}
-                        y={-100}
+                        y={-200}
                         text={{ Portugues: "Construção do design e funcionamento de sites.", English: "Construction of website design and functionality" }}
                     />
                     <ServiceCard
                         icon={MdPhoneAndroid}
                         titleElement={{ Portugues: "Criação de apps", English: "Apps development" }}
-                        x={100}
+                        x={200}
                         text={{ Portugues: "Desenvolvimento de aplicativos.", English: "Development of apps." }}
                     />
                 </div>

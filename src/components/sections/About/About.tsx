@@ -22,7 +22,7 @@ const About = () => {
                         className='flex w-full items-center justify-center lg:w-[45%]'
                         initial={{ x: 110, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ type: 'spring', duration: 0.5 }}
                         viewport={{ once: true }}
                     >
                         <img src={Avatar.src} className="w-[270px] h-[270px] select-none my-4 rounded-[50%] shadow-lg border-gradient sm:w-[340px] sm:h-[340px] lg:my-0" alt="Meu avatar" />
@@ -31,7 +31,7 @@ const About = () => {
                         className='flex w-[90%] flex-col items-center lg:w-[55%]'
                         initial={{ y: 110, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.4 }}
+                        transition={{ type: 'spring', duration: 0.4 }}
                         viewport={{ once: true }}
                     >
                         <Heading

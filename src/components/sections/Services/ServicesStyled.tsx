@@ -20,10 +20,11 @@ type ServiceCardProps = {
 export const ServiceCard = ({ icon, text, titleElement, x, y, className, ...rest }: ServiceCardProps) => {
     return (
         <motion.div
-            className={`flex Card-Gradient z-[1] relative transition-all duration-300 before:rounded-lg after:rounded-lg hover:scale-[1.02] ${className}`}
+            className={`flex Card-Gradient z-[1] relative transition-all duration-300 before:rounded-lg after:rounded-lg ${className}`}
             initial={{ x: x, y: y, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 0.4 }}
+            whileInHover={{ scale: 1.02 }}
+            transition={{ type: 'spring', duration: 0.4 }}
             viewport={{ once: true }}
             {...rest}
         >

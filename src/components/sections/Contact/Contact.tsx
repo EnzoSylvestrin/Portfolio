@@ -32,7 +32,7 @@ const Contact = () => {
                         className="w-full flex flex-col my-6 items-center gap-3 md:items-start md:my-0 md:pr-6"
                         initial={{ y: 200, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.4 }}
+                        transition={{ type: 'spring', duration: 0.4 }}
                         viewport={{ once: true }}
                     >
                         <Heading text={{ Portugues: "Entre em contato comigo", English: "Get in contact with me" }} className="text-center md:text-start" size="md" gradient={true} />
