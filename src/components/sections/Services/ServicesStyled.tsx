@@ -1,5 +1,3 @@
-import { HTMLAttributes } from "react";
-
 import { IconType } from "react-icons";
 
 import { motion } from 'framer';
@@ -20,7 +18,7 @@ type ServiceCardProps = {
 export const ServiceCard = ({ icon, text, titleElement, x, y, className, ...rest }: ServiceCardProps) => {
     return (
         <motion.div
-            className={`flex Card-Gradient z-[1] relative transition-all duration-300 before:rounded-lg after:rounded-lg ${className}`}
+            className={`flex Service-Gradient z-[1] ml-1 relative before:rounded-lg after:rounded-lg ${className}`}
             initial={{ x: x, y: y, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             whileHover={{ scale: 1.02 }}
@@ -28,7 +26,7 @@ export const ServiceCard = ({ icon, text, titleElement, x, y, className, ...rest
             viewport={{ once: true }}
             {...rest}
         >
-            <div className="flex w-full ml-[6px] mt-[6px] flex-col gap-3 px-4 py-6 rounded-md bg-gray-200 items-center justify-center dark:bg-zinc-900">
+            <div className="flex w-full flex-col mt-[3px] ml-[3px] gap-3 px-4 py-6 rounded-md bg-gray-200 items-center justify-center dark:bg-zinc-900">
                 <LinearGradientIcon
                     id="10"
                     Icon={icon}

@@ -55,6 +55,23 @@
     z-index: -1;
 }
 
+.Service-Gradient::after {
+    filter: blur(4px);
+}
+
+.Service-Gradient::before,
+.Service-Gradient::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    background: linear-gradient(45deg, var(--first), var(--second), var(--third), var(--first), var(--second), var(--third));
+    background-size: 300%;
+    animation: animaBorda 10s linear alternate infinite;
+    z-index: -1;
+}
+
+
 .Input-Gradient::after {
     filter: blur(4px);
 }
