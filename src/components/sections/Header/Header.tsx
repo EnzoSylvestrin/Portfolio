@@ -91,7 +91,12 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                         <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={"0"} />
                         <li className="text-xxl">
                             <a href="https://github.com/EnzoSylvestrin" rel="noopener noreferrer" target="_blank">
-                                <LinearGradientIcon Icon={AiOutlineGithub} size={30} id={"0"} />
+                                <LinearGradientIcon
+                                    Icon={AiOutlineGithub}
+                                    size={30}
+                                    id={"0"}
+                                    reescale
+                                />
                             </a>
                         </li>
                     </div>
@@ -101,7 +106,12 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
                     <ThemeComponent dark={DarkMode} onClick={ToggleMode} id={'2'} />
                     <li className="text-xxl transition-all duration-300 hover:scale-110">
                         <a href="https://github.com/EnzoSylvestrin" rel="noopener noreferrer" target="_blank">
-                            <LinearGradientIcon Icon={AiOutlineGithub} size={30} id={"2"} />
+                            <LinearGradientIcon
+                                Icon={AiOutlineGithub}
+                                size={30}
+                                id={"2"}
+                                reescale
+                            />
                         </a>
                     </li>
                 </ul>

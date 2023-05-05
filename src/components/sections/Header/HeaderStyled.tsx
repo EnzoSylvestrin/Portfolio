@@ -24,7 +24,7 @@ export const ThemeComponent = ({ dark, id, ...rest }: LiHTMLAttributes<HTMLLIEle
         <li className={
             clsx("text-xxl cursor-pointer", id != '0' ? 'transition-all duration-300 hover:scale-110' : '')
         } {...rest}>
-            <LinearGradientIcon Icon={dark ? BiSun : BiMoon} size={32} id={id} />
+            <LinearGradientIcon Icon={dark ? BiSun : BiMoon} size={32} id={id} reescale />
         </li>
     );
 }

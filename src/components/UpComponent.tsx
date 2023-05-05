@@ -38,7 +38,8 @@ const UpComponent = () => {
                     id='8'
                     Icon={BsFillCaretUpFill}
                     size={28}
-                    className='2xl:w-10 2xl:h-10'
+                    className='2xl:w-[42px] 2xl:h-[48px]'
+                    reescale
                 />
             </div>
         </div>
