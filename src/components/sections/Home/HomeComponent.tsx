@@ -72,6 +72,7 @@ const HomeComponent = () => {
                         loop
                         src="https://assets3.lottiefiles.com/packages/lf20_v9riyrep.json"
                         style={{ height: 420, width: 420 }}
+                        className='2xl:!w-[600px] 2xl:!h-[600px]'
                     >
                     </Player>
                 </motion.div>
