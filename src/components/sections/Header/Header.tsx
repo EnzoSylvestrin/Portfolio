@@ -9,7 +9,7 @@ import { ItemUl, MenuComponent, ThemeComponent } from './HeaderStyled';
 import { LinearGradientIcon } from '@/components/CommomComponents';
 import { useLanguage } from '@/components/Language/LanguageProvider';
 
-const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dark">> }) => {
+const Header = ({ theme, setTheme }: { theme: string, setTheme: Dispatch<SetStateAction<"light" | "dark">> }) => {
 
     const [DarkMode, setDarkMode] = useState<boolean>(true);
     const [State, setState] = useState<boolean>(false);
@@ -37,7 +37,7 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
 
     return (
         <header id="#top">
-            <nav className="w-full fixed z-[999] bg-neutral-800 px-12 2xl:px-[6%] flex items-center justify-center h-[12vh] min-h-[4rem] mdlg:justify-between">
+            <nav className={`w-full fixed z-[999] transition-all duration-300 px-12 2xl:px-[6%] flex items-center justify-center h-[12vh] min-h-[4rem] mdlg:justify-between ${theme === 'dark' ? 'dark bg-zinc-800' : 'bg-gray-300'}`}>
                 <a href="#top" className="text-center text-transparent text-2xl 2xl:text-xlg bg-clip-text gradient-text transition-all duration-300 hover:scale-105 mdlg:text-left">Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={

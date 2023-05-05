@@ -50,7 +50,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LanguageProvider>
-        <Header setTheme={setTheme} />
+        <Header theme={Theme} setTheme={setTheme} />
         <section className={clsx("transition-all duration-300", Theme == 'light' ? 'bg-gray-200' : 'dark bg-zinc-900')}>
           <UpComponent />
           <HomeComponent />

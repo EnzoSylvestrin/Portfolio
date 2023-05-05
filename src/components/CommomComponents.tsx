@@ -32,8 +32,6 @@ export const LinearGradientIcon = ({ Icon, id, size, reescale = false, className
         return () => window.removeEventListener('resize', updateScreenWidth);
     }, []);
 
-    console.log(screenWidth);
-
     const RealSize = screenWidth >= 1536 ? reescale ? size * 1.5 : size : size;
 
     return (

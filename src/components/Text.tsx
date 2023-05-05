@@ -31,7 +31,7 @@ export default function Text({ size = 'md', text, children, className, useDarkMo
                     'text-lg 2xl:text-xxl': size === 'lg',
                     'text-xl 2xl:text-2xl': size === 'xl',
                 },
-                useDarkMode ? 'dark:text-white' : '',
+                useDarkMode ? 'dark:text-gray-200' : '',
                 gradient ? 'gradient-text bg-clip-text' : '',
                 className,
             )}

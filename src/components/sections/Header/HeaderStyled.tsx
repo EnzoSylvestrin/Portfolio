@@ -5,12 +5,13 @@ import clsx from 'clsx';
 import { BiMoon, BiSun } from 'react-icons/bi';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { HiXMark } from 'react-icons/hi2';
+
 import { LinearGradientIcon } from '@/components/CommomComponents';
 
 export const ItemUl = ({ children, state, link }: { children: ReactNode, state: boolean, link: string }) => {
     return (
         <li className={
-            clsx("text-lg 2xl:text-xxl text-gray-200 cursor-pointer tracking-wider item-ul duration-250 transition-all mt-2 mdlg:opacity-100 " +
+            clsx("text-lg 2xl:text-xxl text-stone-900 dark:text-gray-200 cursor-pointer tracking-wider item-ul duration-250 transition-all mt-2 mdlg:opacity-100 " +
                 "after:block after:h-0 after:mr-1 after:scale-0 after:transition-transform after:duration-[320ms] after:ease-in-out " +
                 "hover:after:scale-100 hover:after:h-auto", state ? 'opacity-100' : 'opacity-0')
         }>
