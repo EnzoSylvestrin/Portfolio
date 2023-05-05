@@ -10,7 +10,7 @@ export type TextProps = {
     className?: string,
     useDarkMode?: boolean,
     gradient?: boolean,
-    text?: LanguageProps
+    text?: LanguageProps | string
 }
 
 export type LanguageProps = {
@@ -26,10 +26,10 @@ export default function Text({ size = 'md', text, children, className, useDarkMo
             className={clsx(
                 "text-stone-900",
                 {
-                    'text-sm': size === 'sm',
-                    'text-md': size === 'md',
-                    'text-lg': size === 'lg',
-                    'text-xl': size === 'xl',
+                    'text-sm 2xl:text-lg': size === 'sm',
+                    'text-md 2xl:text-xl': size === 'md',
+                    'text-lg 2xl:text-xxl': size === 'lg',
+                    'text-xl 2xl:text-2xl': size === 'xl',
                 },
                 useDarkMode ? 'dark:text-white' : '',
                 gradient ? 'gradient-text bg-clip-text' : '',
@@ -43,11 +43,15 @@ export default function Text({ size = 'md', text, children, className, useDarkMo
                     :
                     <p>
                         {
-                            language === "English"
+                            typeof text !== 'string'
                                 ?
-                                text?.English
+                                language === "English"
+                                    ?
+                                    text?.English
+                                    :
+                                    text?.Portugues
                                 :
-                                text?.Portugues
+                                text
                         }
                     </p>
             }

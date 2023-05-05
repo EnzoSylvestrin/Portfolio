@@ -23,10 +23,10 @@ export default function Heading({ size = 'md', text, children, className, useDar
         <Slot
             className={clsx(
                 {
-                    'text-xl': size === 'sm',
-                    'text-xxl': size === 'md',
-                    'text-2xl': size === 'lg',
-                    'text-xlg': size === 'xl',
+                    'text-xl 2xl:text-xxl': size === 'sm',
+                    'text-xxl 2xl:text-xlg': size === 'md',
+                    'text-2xl 2xl:text-xlg': size === 'lg',
+                    'text-xlg 2xl:text-5xl': size === 'xl',
                 },
                 useDarkMode ? 'text-stone-900 dark:text-white' : 'text-white',
                 gradient ? 'gradient-text bg-clip-text' : '',

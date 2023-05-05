@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap");
 
 :root {
-  --first: #AF40FF;
-  --second: #5B42F3;
-  --third: #00DDEB;
+  --first: #af40ff;
+  --second: #5b42f3;
+  --third: #00ddeb;
   --bgColor: rgb(24 24 27);
   --inputColor: rgb(31 41 55);
 }
@@ -12,8 +12,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Work Sans', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: "Work Sans", -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
   scroll-padding-top: 12vh;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -30,19 +32,37 @@ a {
 }
 
 .gradient-text {
-  background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
+  background-image: linear-gradient(
+    to right,
+    var(--first),
+    var(--second),
+    var(--third)
+  );
   color: transparent !important;
 }
 
 .border-gradient {
   background-origin: border-box;
-  background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
+  background-image: linear-gradient(
+    to right,
+    var(--first),
+    var(--second),
+    var(--third)
+  );
   background-clip: context-box, border-box;
 }
 
 .border-gradient-animate {
   background-origin: border-box;
-  background-image: linear-gradient(to right, var(--first), var(--second), var(--third), var(--first), var(--second), var(--third));
+  background-image: linear-gradient(
+    to right,
+    var(--first),
+    var(--second),
+    var(--third),
+    var(--first),
+    var(--second),
+    var(--third)
+  );
   background-clip: context-box, border-box;
 }
 
@@ -71,28 +91,33 @@ a {
   color: #e7e7e7e7;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-  color: #e7e7e7e7;  
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #e7e7e7e7;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-  color: #e7e7e7e7;  
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #e7e7e7e7;
 }
 
-:-ms-input-placeholder {  
-  color: #e7e7e7e7;  
+:-ms-input-placeholder {
+  color: #e7e7e7e7;
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus {
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--first) !important;
   -webkit-box-shadow: 0 0 0px 1000px var(--inputColor) inset;
 }
 
+*:focus,
+*:active {
+  outline: none;
+}
 
 @tailwind base;
 @tailwind components;

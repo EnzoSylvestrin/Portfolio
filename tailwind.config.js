@@ -20,15 +20,24 @@ module.exports = {
         xs: '370px',
         mdlg: '870px'
       },
-    },
-    fontSize: {
-      sm: 16,
-      md: 18,
-      lg: 20,
-      xl: 24,
-      xxl: 28,
-      '2xl': '2rem',
-      xlg: '2.5rem',
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0.1' },
+          '100%': { opacity: '1.0' }
+        }
+      },
+      animation: {
+        fadeIn: 'fadeIn 0.6s ease',
+      },
+      fontSize: {
+        sm: 16,
+        md: 18,
+        lg: 20,
+        xl: 24,
+        xxl: 28,
+        '2xl': '2rem',
+        xlg: '2.5rem',
+      },
     },
   },
   darkMode: 'class',

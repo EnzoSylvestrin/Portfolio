@@ -13,10 +13,13 @@ const About = () => {
     return (
         <ContainerCommom id="Sobre">
             <div>
-                <TitleSection title={{
-                    English: "About me",
-                    Portugues: "Sobre mim"
-                }} />
+                <TitleSection
+                    title={{
+                        English: "About me",
+                        Portugues: "Sobre mim"
+                    }}
+                    className='mb-2'
+                />
                 <div className="flex items-center justify-center w-full flex-col lg:flex-row">
                     <motion.div
                         className='flex w-full items-center justify-center lg:w-[45%]'

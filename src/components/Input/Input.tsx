@@ -46,7 +46,7 @@ function InputInput({ PlaceHolderComponent, ...rest }: TextInputInputProps) {
 
     return (
         <input
-            className='bg-transparent flex-1 caret-fuchsia-500 text-stone-900 text-xs outline-none placeholder:text-gray-500 dark:text-white dark:placeholder:text-gray-400'
+            className='bg-transparent flex-1 caret-fuchsia-500 text-stone-900 text-xs 2xl:text-lg outline-none placeholder:text-gray-500 dark:text-white dark:placeholder:text-gray-400'
             placeholder={
                 language === "English"
                     ?

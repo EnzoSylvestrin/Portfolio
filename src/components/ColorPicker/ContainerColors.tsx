@@ -17,7 +17,7 @@ const ContainerColors = () => {
             />
             <ColorPicker
                 id={2}
-                className='absolute top-[20vh] left-[50%] md:left-20 md:translate-x-0'
+                className='absolute top-[20vh] left-[50%] md:left-20 2xl:left-[calc(6%_+_30px)] md:translate-x-0'
                 initialValue='var(--second)'
                 active={active}
                 setActive={setActive}

@@ -21,7 +21,7 @@ const Contact = () => {
     }
 
     return (
-        <ContainerCommom id="Contato">
+        <ContainerCommom className="2xl:mt-14" id="Contato">
             <div>
                 <TitleSection title={{
                     English: "Contact",

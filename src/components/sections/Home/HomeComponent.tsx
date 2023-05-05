@@ -16,7 +16,7 @@ const HomeComponent = () => {
 
     return (
         <>
-            <div className="h-screen w-full flex items-center justify-center pt-[12vh] p-0 xs:p-4 sm:px-12 relative" id='home'>
+            <div className="h-screen w-full flex items-center justify-center pt-[12vh] p-0 xs:p-4 sm:px-12 2xl:px-[6%] relative" id='home'>
                 <motion.div
                     className="flex items-center mt-12 flex-col h-full w-full justify-center md:w-[50%] md:items-start"
                     initial={{ x: -350, opacity: 0 }}
@@ -24,8 +24,9 @@ const HomeComponent = () => {
                     transition={{ duration: 0.4 }}
                     viewport={{ once: true }}
                 >
+                    <ContainerColors />
                     <LanguageComponent />
-                    <Heading size='md' className="text-center md:text-start sm:text-xlg">
+                    <Heading size='md' className="text-center md:text-start sm:text-xlg 2xl:mt-3">
                         <h1>
                             {
                                 language === "English"
@@ -47,7 +48,6 @@ const HomeComponent = () => {
                             }
                         </h2>
                     </Heading>
-                    <ContainerColors />
                     <Typewriter
                         options={{
                             strings: [language === "English" ? 'Developer' : 'Desenvolvedor', 'FullStack', 'Junior', 'Freenlancer', 'Gamer'],

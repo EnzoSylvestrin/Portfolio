@@ -1,7 +1,7 @@
 import { IconBaseProps, IconType } from 'react-icons/lib';
-import Heading from './Heading';
-import { useLanguage } from './Language/LanguageProvider';
+
 import { LanguageProps } from './Text';
+import Heading from './Heading';
 
 type GradientIcon = IconBaseProps & {
     Icon: IconType,
@@ -9,9 +9,9 @@ type GradientIcon = IconBaseProps & {
     size: number
 }
 
-export const LinearGradientIcon = ({ Icon, id, size, ...rest }: GradientIcon) => {
+export const LinearGradientIcon = ({ Icon, id, size, className, ...rest }: GradientIcon) => {
     return (
-        <svg width={`${size}px`} height={`${size}px`} className="flex items-center justify-center">
+        <svg width={`${size}px`} height={`${size}px`} className={`flex items-center justify-center ${className}`}>
             <linearGradient id={id} x1="0" y1="0" x2="1" y2="0">
                 <stop offset="0%" stopColor="var(--first)" />
                 <stop offset="50%" stopColor="var(--second)" />

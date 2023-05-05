@@ -18,10 +18,13 @@ const UpComponent = () => {
                 setShowScroll(false);
             }
         };
+
         document.addEventListener("scroll", onScroll);
+
         return () => {
             document.removeEventListener("scroll", onScroll);
         };
+
     }, []);
 
     const scrollTop = () => {
@@ -29,12 +32,13 @@ const UpComponent = () => {
     };
 
     return (
-        <div onClick={scrollTop} className={`fixed bottom-3 right-3 z-[998] transition-all duration-200 cursor-pointer hover:scale-105 ${showScroll ? "block" : "hidden"}`}>
+        <div onClick={scrollTop} className={`fixed bottom-3 right-3 z-[998] transition-all duration-200 cursor-pointer hover:scale-105 ${showScroll ? "block animate-fadeIn" : "hidden"}`}>
             <div className="flex bg-gray-200 items-center justify-center rounded-full dark:bg-stone-900 Card-Gradient after:rounded-full before:rounded-full relative p-1">
                 <LinearGradientIcon
                     id='8'
                     Icon={BsFillCaretUpFill}
                     size={28}
+                    className='2xl:w-10 2xl:h-10'
                 />
             </div>
         </div>

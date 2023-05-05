@@ -1,98 +1,135 @@
 .item-ul::after {
-    border-bottom: 2px solid transparent;
-    background-origin: border-box;
-    background-image: linear-gradient(to right, var(--first), var(--second), var(--third));
-    background-clip: context-box, border-box;
+  border-bottom: 2px solid transparent;
+  background-origin: border-box;
+  background-image: linear-gradient(
+    to right,
+    var(--first),
+    var(--second),
+    var(--third)
+  );
+  background-clip: context-box, border-box;
 }
 
 .smallColor .react-colorful {
-    width: 160px;
-    height: 160px;
+  width: 160px;
+  height: 160px;
 }
 
 .smallColor .react-colorful__hue {
-    height: 18px;
+  height: 18px;
 }
 
 @media (max-width: 400px) {
-    .smallColor .react-colorful {
-        width: 120px;
-        height: 120px;
-    }
+  .smallColor .react-colorful {
+    width: 120px;
+    height: 120px;
+  }
 }
- 
+
 .right-calc {
-    left: calc(50% + 30px);
+  left: calc(50% + 30px);
 }
 
 .left-calc {
-    left: calc(50% - 30px);
+  left: calc(50% - 30px);
 }
 
 @media (min-width: 768px) {
-    .left-calc {
-        left: 3rem;
-    }
+  .left-calc {
+    left: 3rem;
+  }
 
-    .right-calc {
-        left: 7rem;
-    }
+  .right-calc {
+    left: 7rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .left-calc {
+    left: 6%;
+  }
+
+  .right-calc {
+    left: calc(6% + 60px);
+  }
 }
 
 .Card-Gradient::after {
-    filter: blur(4px);
+  filter: blur(4px);
 }
 
 .Card-Gradient::before,
 .Card-Gradient::after {
-    content: "";
-    position: absolute;
-    width: calc(100% + 6px);
-    height: calc(100% + 6px);
-    background: linear-gradient(45deg, var(--first), var(--second), var(--third), var(--first), var(--second), var(--third));
-    background-size: 300%;
-    animation: animaBorda 10s linear alternate infinite;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  background: linear-gradient(
+    45deg,
+    var(--first),
+    var(--second),
+    var(--third),
+    var(--first),
+    var(--second),
+    var(--third)
+  );
+  background-size: 300%;
+  animation: animaBorda 10s linear alternate infinite;
+  z-index: -1;
 }
 
 .Service-Gradient::after {
-    filter: blur(4px);
+  filter: blur(4px);
 }
 
 .Service-Gradient::before,
 .Service-Gradient::after {
-    content: "";
-    position: absolute;
-    width: calc(100% + 3px);
-    height: calc(100% + 3px);
-    background: linear-gradient(45deg, var(--first), var(--second), var(--third), var(--first), var(--second), var(--third));
-    background-size: 300%;
-    animation: animaBorda 10s linear alternate infinite;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  width: calc(100% + 3px);
+  height: calc(100% + 3px);
+  background: linear-gradient(
+    45deg,
+    var(--first),
+    var(--second),
+    var(--third),
+    var(--first),
+    var(--second),
+    var(--third)
+  );
+  background-size: 300%;
+  animation: animaBorda 10s linear alternate infinite;
+  z-index: -1;
 }
 
-
 .Input-Gradient::after {
-    filter: blur(4px);
+  filter: blur(4px);
 }
 
 .Input-Gradient::before,
 .Input-Gradient::after {
-    content: "";
-    position: absolute;
-    width: calc(100% + 4px);
-    height: calc(100% + 6px);
-    background: linear-gradient(45deg, var(--first), var(--second), var(--third), var(--first), var(--second), var(--third));
-    background-size: 300%;
-    animation: animaBorda 10s linear alternate infinite;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 6px);
+  background: linear-gradient(
+    45deg,
+    var(--first),
+    var(--second),
+    var(--third),
+    var(--first),
+    var(--second),
+    var(--third)
+  );
+  background-size: 300%;
+  animation: animaBorda 10s linear alternate infinite;
+  z-index: -1;
 }
 
 .make-animate {
-    background-size: 300%;
-    animation: animaBorda 10s linear alternate infinite;
+  background-size: 300%;
+  animation: animaBorda 10s linear alternate infinite;
 }
-
 
 /* .Card-Gradient:hover.Card-Gradient::before {
     animation: animaBorda 5s linear alternate infinite;
@@ -103,10 +140,10 @@
 } */
 
 @keyframes animaBorda {
-    from {
-        background-position: 0;
-    }
-    to {
-        background-position: 300%;
-    }
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 300%;
+  }
 }

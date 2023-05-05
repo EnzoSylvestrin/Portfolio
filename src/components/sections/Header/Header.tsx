@@ -37,8 +37,8 @@ const Header = ({ setTheme }: { setTheme: Dispatch<SetStateAction<"light" | "dar
 
     return (
         <header id="#top">
-            <nav className="w-full fixed z-[999] bg-neutral-800 px-12 flex items-center justify-center h-[12vh] min-h-[4rem] mdlg:justify-between">
-                <a href="#top" className="text-center text-transparent text-2xl bg-clip-text gradient-text transition-all duration-300 hover:scale-105 mdlg:text-left">Enzo</a>
+            <nav className="w-full fixed z-[999] bg-neutral-800 px-12 2xl:px-[6%] flex items-center justify-center h-[12vh] min-h-[4rem] mdlg:justify-between">
+                <a href="#top" className="text-center text-transparent text-2xl 2xl:text-xlg bg-clip-text gradient-text transition-all duration-300 hover:scale-105 mdlg:text-left">Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={
                     clsx("bg-gray-900 fixed top-[12vh] z-[999] right-0 h-[88vh] flex-col flex items-center justify-center duration-500 transition-all ease-out gap-5 mdlg:static mdlg:flex-row mdlg:w-full mdlg:h-auto mdlg:bg-transparent mdlg:duration-[0ms]", State ? "w-[180px]" : "w-0")
