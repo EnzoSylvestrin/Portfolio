@@ -51,7 +51,7 @@ const ColorPicker = ({ id, initialValue, className, active, setActive }: ColorPi
             </div>
             {showPicker && (
                 <div className='smallColor'>
-                    <HexColorPicker style={{ position: "absolute" }} color={color} onChange={handleChange} />
+                    <HexColorPicker style={{ position: "absolute", zIndex: '9999' }} color={color} onChange={handleChange} />
                 </div>
             )}
         </div>

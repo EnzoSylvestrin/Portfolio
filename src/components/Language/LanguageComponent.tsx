@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { useLanguage } from './LanguageProvider';
 
 import { IoLanguage } from 'react-icons/io5';
@@ -5,7 +7,6 @@ import { BiPointer } from 'react-icons/bi';
 
 import { LinearGradientIcon } from '../CommomComponents';
 import Text from '../Text';
-import { useState } from 'react';
 
 const LanguageComponent = () => {
 

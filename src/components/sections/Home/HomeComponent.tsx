@@ -24,7 +24,6 @@ const HomeComponent = () => {
                     transition={{ duration: 0.4 }}
                     viewport={{ once: true }}
                 >
-                    <ContainerColors />
                     <LanguageComponent />
                     <Heading size='md' className="text-center md:text-start sm:text-xlg 2xl:mt-3">
                         <h1>
@@ -76,6 +75,7 @@ const HomeComponent = () => {
                     >
                     </Player>
                 </motion.div>
+                <ContainerColors />
             </div>
 
         </>
