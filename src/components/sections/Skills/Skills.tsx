@@ -18,6 +18,7 @@ import { TitleSection } from "@/components/CommomComponents";
 import { useLanguage } from "@/components/Language/LanguageProvider";
 
 import { Card } from './SkillsStyled';
+import dayjs from "dayjs";
 
 const Skills = () => {
 
@@ -26,7 +27,7 @@ const Skills = () => {
     const { language } = useLanguage();
 
     const maxProgress = 100;
-    const maxTime = 30;
+    const maxTime = 36;
 
     const Title = useRef<HTMLHeadingElement>(null);
     const Description = useRef<HTMLParagraphElement>(null);
@@ -37,17 +38,25 @@ const Skills = () => {
         time: number, //in months
     };
 
+    const initialDateJS = dayjs('2021-02-01');
+    const initialDateTS = dayjs('2021-12-15');
+    const initialDateNext = dayjs('2022-02-14');
+    const initialDateHTML = dayjs('2020-08-01');
+    const initialDateCSS = dayjs('2020-08-01');
+    const initialDateReact = dayjs('2021-07-01');
+    const initialDateNode = dayjs('2021-06-10');
+
     const Skills: SkillsProps[] = [
         { id: "Python", icon: FaPython, time: 6 },
-        { id: "Java", icon: FaJava, time: 12 },
-        { id: "JavaScript", icon: DiJavascript1, time: 24 },
-        { id: "TypeScript", icon: SiTypescript, time: 12 },
-        { id: "Csharp", icon: SiCsharp, time: 6 },
-        { id: "Node", icon: SiNodedotjs, time: 18 },
-        { id: "React e React Native", icon: FaReact, time: 18 },
-        { id: "Next", icon: SiNextdotjs, time: 12 },
-        { id: "CSS", icon: IoLogoCss3, time: 24 },
-        { id: "HTML", icon: AiFillHtml5, time: 24 },
+        { id: "Java", icon: FaJava, time: 14 },
+        { id: "JavaScript", icon: DiJavascript1, time: Math.abs(initialDateJS.diff(dayjs(new Date()), 'month')) },
+        { id: "TypeScript", icon: SiTypescript, time: Math.abs(initialDateTS.diff(dayjs(new Date()), 'month')) },
+        { id: "Csharp", icon: SiCsharp, time: 8 },
+        { id: "Node", icon: SiNodedotjs, time: Math.abs(initialDateNode.diff(dayjs(new Date()), 'month')) },
+        { id: "React e React Native", icon: FaReact, time: Math.abs(initialDateReact.diff(dayjs(new Date()), 'month')) },
+        { id: "Next", icon: SiNextdotjs, time: Math.abs(initialDateNext.diff(dayjs(new Date()), 'month')) },
+        { id: "CSS", icon: IoLogoCss3, time: Math.abs(initialDateCSS.diff(dayjs(new Date()), 'month')) },
+        { id: "HTML", icon: AiFillHtml5, time: Math.abs(initialDateHTML.diff(dayjs(new Date()), 'month')) },
     ];
 
     const HandleHoverCard = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
