@@ -49,7 +49,7 @@ const HomeComponent = () => {
                     </Heading>
                     <Typewriter
                         options={{
-                            strings: [language === "English" ? 'Developer' : 'Desenvolvedor', 'FullStack', 'Junior', 'Freenlancer', 'Gamer'],
+                            strings: [language === "English" ? 'Developer' : 'Desenvolvedor', 'FullStack', 'Pleno', 'Freenlancer', 'Gamer'],
                             autoStart: true,
                             loop: true,
                             cursorClassName: 'text-xlg bg-clip-text gradient-text',
