@@ -24,9 +24,9 @@ export default function Heading({ size = 'md', text, children, className, useDar
             className={clsx(
                 {
                     'text-xl 2xl:text-xxl': size === 'sm',
-                    'text-xxl 2xl:text-xlg': size === 'md',
-                    'text-2xl 2xl:text-xlg': size === 'lg',
-                    'text-xlg 2xl:text-5xl': size === 'xl',
+                    'text-xxl 2xl:text-[2rem]': size === 'md',
+                    'text-2xl 2xl:text-[2.125rem]': size === 'lg',
+                    'text-xlg 2xl:text-[2.375rem]': size === 'xl',
                 },
                 useDarkMode ? 'text-stone-900 dark:text-white' : 'text-white',
                 gradient ? 'gradient-text bg-clip-text' : '',

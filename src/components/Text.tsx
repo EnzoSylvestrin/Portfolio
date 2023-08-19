@@ -26,10 +26,10 @@ export default function Text({ size = 'md', text, children, className, useDarkMo
             className={clsx(
                 "text-stone-900",
                 {
-                    'text-sm 2xl:text-lg': size === 'sm',
-                    'text-md 2xl:text-xl': size === 'md',
-                    'text-lg 2xl:text-xxl': size === 'lg',
-                    'text-xl 2xl:text-2xl': size === 'xl',
+                    'text-sm 2xl:text-md': size === 'sm',
+                    'text-md 2xl:text-lg': size === 'md',
+                    'text-lg 2xl:text-xl': size === 'lg',
+                    'text-xl 2xl:text-xxl': size === 'xl',
                 },
                 useDarkMode ? 'dark:text-gray-200' : '',
                 gradient ? 'gradient-text bg-clip-text' : '',

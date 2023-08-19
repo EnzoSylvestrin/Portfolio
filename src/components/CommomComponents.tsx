@@ -32,7 +32,7 @@ export const LinearGradientIcon = ({ Icon, id, size, reescale = false, className
         return () => window.removeEventListener('resize', updateScreenWidth);
     }, []);
 
-    const RealSize = screenWidth >= 1536 ? reescale ? size * 1.5 : size : size;
+    const RealSize = screenWidth >= 1536 ? reescale ? size * 1.1 : size : size;
 
     return (
         <svg width={`${RealSize}px`} height={`${RealSize}px`} className={`flex items-center justify-center ${className}`}>
