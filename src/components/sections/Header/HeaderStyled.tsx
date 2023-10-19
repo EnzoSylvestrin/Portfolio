@@ -33,7 +33,7 @@ export const ThemeComponent = ({ dark, id, ...rest }: LiHTMLAttributes<HTMLLIEle
 
 export const MenuComponent = ({ state, ...rest }: HTMLAttributes<HTMLDivElement> & { state: boolean }) => {
     return (
-        <div className="absolute top right-[5%] transition-all flex items-center justify-center duration-300 hover:scale-110 mdlg:hidden" {...rest}>
+        <div className="absolute top right-[5%] transition-all cursor-pointer flex items-center justify-center duration-300 hover:scale-110 mdlg:hidden" {...rest}>
             {
                 <LinearGradientIcon Icon={state ? HiXMark : AiOutlineMenu} id={'3'} size={22} />
             }
