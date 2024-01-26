@@ -27,7 +27,7 @@ const Skills = () => {
     const { language } = useLanguage();
 
     const maxProgress = 100;
-    const maxTime = 36;
+    const maxTime = 48;
 
     const Title = useRef<HTMLHeadingElement>(null);
     const Description = useRef<HTMLParagraphElement>(null);
