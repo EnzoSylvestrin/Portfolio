@@ -62,7 +62,7 @@ export default function Home() {
               ?
               <>
                 <Projects loading={setLoadingProjects} />
-                <LoadingComponent w={"50%"} h={"50%"} />
+                <LoadingComponent />
               </>
               :
               <Projects />

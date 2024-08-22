@@ -1,6 +1,5 @@
 import LanguageComponent from '@/components/Language/LanguageComponent';
 import { useLanguage } from '@/contexts/LanguageProvider';
-import { Player } from '@lottiefiles/react-lottie-player';
 
 import { motion } from 'framer';
 
@@ -9,6 +8,10 @@ import Typewriter from "typewriter-effect";
 import Button from "../../Button/Button";
 import ContainerColors from '../../ColorPicker/ContainerColors';
 import Heading from '../../Heading';
+
+import dynamic from 'next/dynamic';
+
+const LottiePlayer = dynamic(() => import('@lottiefiles/react-lottie-player').then(mod => mod.Player), { ssr: false });
 
 const HomeComponent = () => {
 
@@ -66,14 +69,13 @@ const HomeComponent = () => {
                     transition={{ duration: 0.4 }}
                     viewport={{ once: true }}
                 >
-                    <Player
+                     <LottiePlayer
                         autoplay
                         loop
                         src="https://assets3.lottiefiles.com/packages/lf20_v9riyrep.json"
                         style={{ height: 420, width: 420 }}
                         className='2xl:!w-[600px] 2xl:!h-[600px]'
-                    >
-                    </Player>
+                    />
                 </motion.div>
                 <ContainerColors />
             </div>
