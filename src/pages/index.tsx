@@ -12,7 +12,7 @@ import Contact from "@/components/sections/Contact/Contact";
 import UpComponent from "@/components/UpComponent";
 import Services from "@/components/sections/Services/Services";
 import LoadingComponent from "@/components/Loading/LoadingComponent";
-import { LanguageProvider } from "@/components/Language/LanguageProvider";
+import { LanguageProvider } from "@/contexts/LanguageProvider";
 
 import Head from 'next/head';
 

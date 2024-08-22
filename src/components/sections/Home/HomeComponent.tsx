@@ -1,5 +1,5 @@
 import LanguageComponent from '@/components/Language/LanguageComponent';
-import { useLanguage } from '@/components/Language/LanguageProvider';
+import { useLanguage } from '@/contexts/LanguageProvider';
 import { Player } from '@lottiefiles/react-lottie-player';
 
 import { motion } from 'framer';

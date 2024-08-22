@@ -15,7 +15,7 @@ import ContainerCommom from "@/components/ContainerCommom";
 import Heading from "@/components/Heading";
 import Text from "@/components/Text";
 import { TitleSection } from "@/components/CommomComponents";
-import { useLanguage } from "@/components/Language/LanguageProvider";
+import { useLanguage } from '@/contexts/LanguageProvider';
 
 import { Card } from './SkillsStyled';
 import dayjs from "dayjs";
@@ -75,10 +75,10 @@ const Skills = () => {
         let ano: number = Math.floor(time / 12);
         if (ano > 0) {
             if (language === "Português") {
-                finalStr = `${ano} ${ano > 1 ? 'anos' : 'ano'} ${time % 12 > 0 ? `e ${time % (12 * ano)} meses` : ''}`;
+                finalStr = `${ano} ${ano > 1 ? 'anos' : 'ano'} ${time % 12 > 0 ? `e ${time % 12 > 1 ? `${time % (12 * ano)} meses` : '1 mês'}` : ''}`;
             }
             else {
-                finalStr = `${ano} ${ano > 1 ? 'years' : 'year'} ${time % 12 > 0 ? `and ${time % (12 * ano)} months` : ''}`;
+                finalStr = `${ano} ${ano > 1 ? 'years' : 'year'} ${time % 12 > 0 ? `and ${time % 12 > 1 ? `${time % (12 * ano)} months` : '1 month'}` : ''}`;
             }
         }
         else {

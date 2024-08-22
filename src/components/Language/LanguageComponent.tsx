@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { useLanguage } from './LanguageProvider';
+import { useLanguage } from '@/contexts/LanguageProvider';
 
 import { IoLanguage } from 'react-icons/io5';
 import { BiPointer } from 'react-icons/bi';

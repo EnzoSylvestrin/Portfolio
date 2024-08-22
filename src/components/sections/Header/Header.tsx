@@ -7,7 +7,7 @@ import { AiOutlineGithub } from 'react-icons/ai';
 import { ItemUl, MenuComponent, ThemeComponent } from './HeaderStyled';
 
 import { LinearGradientIcon } from '@/components/CommomComponents';
-import { useLanguage } from '@/components/Language/LanguageProvider';
+import { useLanguage } from '@/contexts/LanguageProvider';
 
 const Header = ({ theme, setTheme }: { theme: string, setTheme: Dispatch<SetStateAction<"light" | "dark">> }) => {
 

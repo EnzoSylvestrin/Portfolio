@@ -9,7 +9,12 @@ import Text from '../../Text';
 import ContainerCommom from '@/components/ContainerCommom';
 import { TitleSection } from '@/components/CommomComponents';
 
+import { useLanguage } from '@/contexts/LanguageProvider';
+
 const About = () => {
+
+    const { language } = useLanguage();
+
     return (
         <ContainerCommom id="Sobre">
             <div>
@@ -58,7 +63,7 @@ const About = () => {
                                 clique e faça o download do meu curriculo.`
                             }}
                         />
-                        <Button href={'/Curriculo-Enzo.pdf'} text={{ Portugues: "Currículo", English: "Resume" }} styles="text-xl mt-6" />
+                        <Button href={language === 'Português' ? '/Curriculo-Enzo.pdf' : '/enzo_resume.pdf'} text={{ Portugues: "Currículo", English: "Resume" }} styles="text-xl mt-6" />
                     </motion.div>
                 </div>
             </div>

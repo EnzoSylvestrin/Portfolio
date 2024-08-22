@@ -17,18 +17,14 @@ export const LinearGradientIcon = ({ Icon, id, size, reescale = false, className
     const [screenWidth, setScreenWidth] = useState(0);
 
     useEffect(() => {
-        // Define a function to update the screen width state
         function updateScreenWidth() {
             setScreenWidth(window.innerWidth);
         }
 
-        // Call the update function once on mount
         updateScreenWidth();
 
-        // Add an event listener to update the screen width state on resize
         window.addEventListener('resize', updateScreenWidth);
 
-        // Clean up the event listener on unmount
         return () => window.removeEventListener('resize', updateScreenWidth);
     }, []);
 
