@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useState, useContext, useEffect } from 'react'
-import router from 'next/router'
+import { useSearchParams } from 'next/navigation';
 
 interface LanguageContextValue {
     language: "Português" | "English"
@@ -10,16 +10,17 @@ const LanguageContext = createContext<LanguageContextValue | undefined>(undefine
 
 const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const [language, setLanguage] = useState<"Português" | "English">('Português')
+    const searchParams = useSearchParams();
 
     useEffect(() => {
-        const { lang } = router.query;
+        const lang = searchParams.get('lang');
 
         if (lang === 'en') {
             setLanguage('English');
         } else {
             setLanguage('Português');
         }
-    }, [router.query]);
+    }, [searchParams]);
 
     return (
         <LanguageContext.Provider value={{ language, setLanguage }}>

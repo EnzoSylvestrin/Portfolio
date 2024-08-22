@@ -3,7 +3,7 @@ import { clsx } from 'clsx';
 
 import { Slot } from '@radix-ui/react-slot';
 
-import { useLanguage } from './Language/LanguageProvider';
+import { useLanguage } from '@/contexts/LanguageProvider';
 import { LanguageProps } from './Text';
 
 type HeadingProps = {

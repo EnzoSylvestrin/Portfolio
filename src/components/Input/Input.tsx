@@ -4,7 +4,7 @@ import { Slot } from '@radix-ui/react-slot';
 
 import clsx from 'clsx';
 import { LanguageProps } from '../Text';
-import { useLanguage } from '../Language/LanguageProvider';
+import { useLanguage } from '@/contexts/LanguageProvider';
 
 export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> { }
 

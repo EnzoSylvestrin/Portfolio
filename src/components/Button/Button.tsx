@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from "react";
 import clsx from "clsx";
 
-import { useLanguage } from "../Language/LanguageProvider";
+import { useLanguage } from "@/contexts/LanguageProvider";
 
 import { LanguageProps } from "../Text";
 

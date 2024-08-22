@@ -1,7 +1,7 @@
 import { Slot } from '@radix-ui/react-slot';
 import { clsx } from 'clsx';
 import { ReactNode } from 'react';
-import { useLanguage } from './Language/LanguageProvider';
+import { useLanguage } from '@/contexts/LanguageProvider';
 
 export type TextProps = {
     size?: 'sm' | 'md' | 'lg' | 'xl',
