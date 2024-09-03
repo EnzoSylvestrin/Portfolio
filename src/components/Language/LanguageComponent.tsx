@@ -21,7 +21,7 @@ const LanguageComponent = () => {
     return (
         <div
             onClick={() => setLanguage(language === "Português" ? 'English' : 'Português')}
-            className="flex relative cursor-pointer text-stone-900 bg-gray-300 items-center gap-1 justify-center rounded-lg dark:bg-slate-900 dark:text-white px-2 py-1 mb-3 transition-all duration-200 hover:scale-105"
+            className="flex relative cursor-pointer text-stone-900 bg-gray-300 items-center gap-1 justify-center rounded-lg dark:bg-zinc-800 dark:text-white px-2 py-1 mb-3 transition-all duration-200 hover:scale-105"
             onMouseEnter={HandleMouseHover}
         >
             <IoLanguage size={20} />

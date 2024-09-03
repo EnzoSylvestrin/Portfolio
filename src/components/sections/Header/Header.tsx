@@ -41,7 +41,12 @@ const Header = ({ theme, setTheme }: { theme: string, setTheme: Dispatch<SetStat
                 <a href="#top" className="text-center text-transparent text-2xl 2xl:text-[2.125rem] bg-clip-text gradient-text transition-all duration-300 hover:scale-105 mdlg:text-left">Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={
-                    clsx("bg-gray-300 -mt-[2px] dark:bg-zinc-800 fixed top-[12vh] z-[999] right-0 h-[calc(88vh_+_2px)] flex-col flex items-center justify-center duration-500 transition-all gap-5 mdlg:static mdlg:flex-row mdlg:w-full mdlg:h-auto mdlg:mt-0 mdlg:!bg-transparent mdlg:duration-300", State ? "w-[180px]" : "w-0")
+                    clsx(
+                        `bg-gray-300 -mt-[2px] dark:bg-zinc-800 fixed top-[12vh] z-[999] right-0 h-[calc(88vh_+_2px)] flex-col
+                        flex items-center justify-center duration-500 transition-all gap-5 mdlg:static mdlg:flex-row mdlg:w-full mdlg:h-auto
+                        mdlg:mt-0 mdlg:!bg-transparent mdlg:duration-300`, 
+                        State ? "w-[180px]" : "w-0"
+                    )
                 }>
                     <ItemUl state={State} link="home">
                         Home
