@@ -1,29 +1,38 @@
 import { ReactNode, createContext, useState, useContext, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation';
 
-interface LanguageContextValue {
-    language: "Português" | "English"
-    setLanguage: (language: "Português" | "English") => void
-}
+type Languages = "Português" | "English"
+
+type LanguageContextValue = {
+    language: Languages
+    changeLanguage: (language: Languages) => void
+};
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined)
 
 const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const [language, setLanguage] = useState<"Português" | "English">('Português')
+    const [language, setLanguage] = useState<LanguageContextValue["language"]>('Português')
     const searchParams = useSearchParams();
 
     useEffect(() => {
+        const storageLang = localStorage.getItem('lang');
+
         const lang = searchParams.get('lang');
 
-        if (lang === 'en') {
-            setLanguage('English');
-        } else {
-            setLanguage('Português');
+        if (storageLang) {
+            setLanguage(storageLang === 'pt' ? 'Português' : 'English');
+        } else if (lang) {
+            setLanguage(lang === 'pt' ? 'Português' : 'English');
         }
     }, [searchParams]);
 
+    const changeLanguage = (language: LanguageContextValue["language"]) => {
+        localStorage.setItem('lang', language === 'Português' ? 'pt' : 'en');
+        setLanguage(language)
+    }
+
     return (
-        <LanguageContext.Provider value={{ language, setLanguage }}>
+        <LanguageContext.Provider value={{ language, changeLanguage }}>
             {children}
         </LanguageContext.Provider>
     )

@@ -7,9 +7,10 @@ type ColorPickerProps = {
     className: string,
     active: 0 | 1 | 2 | 3,
     setActive: Dispatch<SetStateAction<0 | 1 | 2 | 3>>
+    onMouseEnter?: () => void
 };
 
-const ColorPicker = ({ id, initialValue, className, active, setActive }: ColorPickerProps) => {
+const ColorPicker = ({ id, initialValue, className, active, setActive, onMouseEnter }: ColorPickerProps) => {
     const [color, setColor] = useState(initialValue);
 
     let showPicker = active === id;
@@ -45,7 +46,7 @@ const ColorPicker = ({ id, initialValue, className, active, setActive }: ColorPi
     }
 
     return (
-        <div className={`${className} cursor-pointer`}>
+        <div className={`${className} cursor-pointer`} onMouseEnter={onMouseEnter}>
             <div onClick={VerifyActive} style={{ color: color }}>
                 <div className='rounded-[50%] w-5 h-5' style={{ backgroundColor: color }}></div>
             </div>

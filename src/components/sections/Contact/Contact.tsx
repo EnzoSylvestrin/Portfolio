@@ -35,7 +35,7 @@ const Contact = () => {
                         transition={{ type: 'spring', duration: 0.4 }}
                         viewport={{ once: true }}
                     >
-                        <Heading text={{ Portugues: "Entre em contato comigo", English: "Get in contact with me" }} className="text-center md:text-start" size="md" gradient={true} />
+                        <Heading text={{ Portugues: "Entre em contato comigo!", English: "Get in contact with me" }} className="text-center md:text-start" size="md" gradient={true} />
                         <Text text={{ Portugues: "Caso queira entrar em contato comigo me mande uma mensagem, eu vou adorar 💖.", English: "If you'd like to get in touch with me, send me a message, I'd love it 💖." }} className="text-center px-4 sm:px-12 md:text-start md:px-0" size="md" />
                         <div className="flex flex-col gap-4 items-center justify-start mt-8">
                             <div className="flex gap-2 items-center justify-start w-full">
@@ -44,7 +44,7 @@ const Contact = () => {
                                     Icon={MdEmail}
                                     size={28}
                                 />
-                                <Text text={{ English: "Enzospavani@gmail.com", Portugues: "Enzospavani@gmail.com" }} className="text-md xs:text-lg" size="md" />
+                                <Text text={{ English: "enzospavani@gmail.com", Portugues: "enzospavani@gmail.com" }} className="text-md xs:text-lg" size="md" />
                             </div>
                             <div className="flex gap-2 items-center justify-start w-full">
                                 <LinearGradientIcon

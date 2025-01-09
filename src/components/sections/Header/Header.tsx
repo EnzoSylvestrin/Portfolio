@@ -37,7 +37,7 @@ const Header = ({ theme, setTheme }: { theme: string, setTheme: Dispatch<SetStat
 
     return (
         <header id="#top">
-            <nav className={`w-full fixed z-[999] transition-all duration-300 px-12 2xl:px-[6%] flex items-center justify-center h-[12vh] mdlg:justify-between ${theme === 'dark' ? 'dark bg-zinc-800' : 'bg-gray-300'}`}>
+            <nav className={`w-full fixed pb-1 z-[999] transition-all duration-300 px-12 2xl:px-[6%] max-h-20 flex items-center justify-center h-[12vh] mdlg:justify-between ${theme === 'dark' ? 'dark bg-zinc-800' : 'bg-gray-300'}`}>
                 <a href="#top" className="text-center text-transparent text-2xl 2xl:text-[2.125rem] bg-clip-text gradient-text transition-all duration-300 hover:scale-105 mdlg:text-left">Enzo</a>
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={

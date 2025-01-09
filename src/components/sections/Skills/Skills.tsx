@@ -15,9 +15,11 @@ import ContainerCommom from "@/components/ContainerCommom";
 import Heading from "@/components/Heading";
 import Text from "@/components/Text";
 import { TitleSection } from "@/components/CommomComponents";
+
 import { useLanguage } from '@/contexts/LanguageProvider';
 
 import { Card } from './SkillsStyled';
+
 import dayjs from "dayjs";
 
 const Skills = () => {
@@ -27,7 +29,6 @@ const Skills = () => {
     const { language } = useLanguage();
 
     const maxProgress = 100;
-    const maxTime = 48;
 
     const Title = useRef<HTMLHeadingElement>(null);
     const Description = useRef<HTMLParagraphElement>(null);
@@ -59,6 +60,12 @@ const Skills = () => {
         { id: "HTML", icon: AiFillHtml5, time: Math.abs(initialDateHTML.diff(dayjs(new Date()), 'month')) },
     ];
 
+    const maxTime = Math.max(...Skills.map(skill => skill.time));
+
+    const defaultSkillDescription = language === "English"
+        ? "Hover or click on a skill to see how much experience I have with each skill. For a full list, check out my "
+        : "Passe o mouse ou clique em uma habilidade para ver quanto tempo de experiência tenho com cada habilidade. Para uma lista completa, confira meu ";
+
     const HandleHoverCard = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         if (Title.current != null && Description.current != null) {
             Title.current.innerHTML = e.currentTarget.id;
@@ -66,6 +73,14 @@ const Skills = () => {
             let description = `${ConvertTime(time)} ${language === "Português" ? "de experiência com essa habilidade!" : "of experience with this skill"}`;
             Description.current.innerHTML = description;
             setProgress(time ? Math.floor(time * maxProgress / maxTime) : 0);
+        }
+    }
+
+    const HandleStopHoveringCard = () => {
+        if (Title.current != null && Description.current != null) {
+            Title.current.innerHTML = language === "English" ? "Skills" : "Habilidades";
+            Description.current.innerHTML = defaultSkillDescription;
+            setProgress(100);
         }
     }
 
@@ -95,10 +110,13 @@ const Skills = () => {
     return (
         <ContainerCommom id="Skills">
             <div>
-                <TitleSection title={{
-                    English: "Skills",
-                    Portugues: "Skills"
-                }} className="mb-3" />
+                <TitleSection 
+                    title={{
+                        English: "Skills",
+                        Portugues: "Habilidades"
+                    }} 
+                    className="mb-3" 
+                />
                 <div className="flex flex-col flex-nowrap w-full sm:flex-row">
                     <motion.div
                         className="w-[100%] flex flex-col items-center justify-center my-3 sm:my-0 sm:w-[30%]"
@@ -109,21 +127,42 @@ const Skills = () => {
                     >
                         <Heading size="lg" gradient={true} className="text-center">
                             <h1 ref={Title}>
-                                Skill
+                                {
+                                    language === "English"
+                                        ?
+                                        "Skills"
+                                        :
+                                        "Habilidades"
+                                }
                             </h1>
                         </Heading>
-                        <ProgressBar className="w-[90%] transition-all duration-300 m-3" bgColor="linear-gradient(to right, var(--first), var(--second), var(--third))" baseBgColor="var(--bgColor)" maxCompleted={maxProgress} completed={progress} />
+                        <ProgressBar
+                            className="w-[90%] transition-all duration-300 m-3"
+                            bgColor="linear-gradient(to right, var(--first), var(--second), var(--third))"
+                            baseBgColor="var(--bgColor)"
+                            maxCompleted={maxProgress}
+                            completed={progress}
+                        />
                         <Text
                             size="lg"
                             className="text-center"
                         >
-                            <p ref={Description}>
+                            <p>
+                                <p ref={Description}>
                                 {
-                                    language === "English"
-                                        ?
-                                        "Hover or click on a skill to se how much experience I have with each skill"
-                                        :
-                                        "Passe o mouse ou clique em cima de uma skill para ver o tempo"
+                                    defaultSkillDescription
+                                }
+                                </p>
+                                {
+                                    Description.current?.innerHTML === defaultSkillDescription &&
+                                    <a 
+                                        href="https://github.com/EnzoSylvestrin" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="text-center text-transparent bg-clip-text gradient-text transition-all duration-300 hover:scale-105"
+                                    > 
+                                        GitHub
+                                    </a>
                                 }
                             </p>
                         </Text>
@@ -142,6 +181,7 @@ const Skills = () => {
                                     Icon={Skill.icon}
                                     id={Skill.id}
                                     onMouseEnter={HandleHoverCard}
+                                    onMouseLeave={HandleStopHoveringCard}
                                 />
                             })
                         }

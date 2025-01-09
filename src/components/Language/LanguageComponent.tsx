@@ -10,7 +10,7 @@ import Text from '../Text';
 
 const LanguageComponent = () => {
 
-    const { language, setLanguage } = useLanguage()
+    const { language, changeLanguage } = useLanguage()
 
     const [showPointer, setShowPointer] = useState(true);
 
@@ -20,7 +20,7 @@ const LanguageComponent = () => {
 
     return (
         <div
-            onClick={() => setLanguage(language === "Português" ? 'English' : 'Português')}
+            onClick={() => changeLanguage(language === "Português" ? 'English' : 'Português')}
             className="flex relative cursor-pointer text-stone-900 bg-gray-300 items-center gap-1 justify-center rounded-lg dark:bg-zinc-800 dark:text-white px-2 py-1 mb-3 transition-all duration-200 hover:scale-105"
             onMouseEnter={HandleMouseHover}
         >
