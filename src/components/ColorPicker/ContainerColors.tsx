@@ -5,7 +5,7 @@ import ColorPicker from "./ColorPicker";
 import { useLanguage } from "@/contexts/LanguageProvider";
 
 const ContainerColors = () => {
-    const language = useLanguage();
+    const { language } = useLanguage();
 
     const [active, setActive] = useState<0 | 1 | 2 | 3>(0);
     const [showMessage, setShowMessage] = useState(true);
@@ -19,7 +19,7 @@ const ContainerColors = () => {
             <div className="absolute top-[-80px] left-[calc(50% - 42px)]">
             {showMessage && (
                 <div className="relative mb-4 w-[120px] text-center text-stone-900 bg-gray-300 dark:bg-zinc-800 dark:text-white px-4 py-2 rounded shadow-md">
-                    {language ? "Change the colors!" : "Altere as cores!"}
+                    {language === "English" ? "Change the colors!" : "Altere as cores!"}
                     <div
                         className="absolute -bottom-2 left-1/2 rounded-[0, 10px, 0, 10px] bg-gray-300 dark:bg-zinc-800 w-4 h-4 transform -translate-x-1/2 rotate-45"
                     />

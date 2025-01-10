@@ -78,7 +78,7 @@ const Skills = () => {
 
     const HandleStopHoveringCard = () => {
         if (Title.current != null && Description.current != null) {
-            Title.current.innerHTML = language === "English" ? "Skills" : "Habilidades";
+            Title.current.innerHTML = "Skills";
             Description.current.innerHTML = defaultSkillDescription;
             setProgress(100);
         }
@@ -113,7 +113,7 @@ const Skills = () => {
                 <TitleSection 
                     title={{
                         English: "Skills",
-                        Portugues: "Habilidades"
+                        Portugues: "Skills"
                     }} 
                     className="mb-3" 
                 />
@@ -132,7 +132,7 @@ const Skills = () => {
                                         ?
                                         "Skills"
                                         :
-                                        "Habilidades"
+                                        "Skills"
                                 }
                             </h1>
                         </Heading>
