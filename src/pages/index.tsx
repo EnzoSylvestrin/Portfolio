@@ -22,7 +22,6 @@ const Projects = dynamic(
 );
 
 export default function Home() {
-
   const [Theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [loadingProjects, setLoadingProjects] = useState(true);
 
