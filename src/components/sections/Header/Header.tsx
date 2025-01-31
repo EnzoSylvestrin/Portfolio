@@ -41,7 +41,7 @@ const Header = ({ theme, setTheme }: { theme: string, setTheme: Dispatch<SetStat
                 <MenuComponent state={State} onClick={ToggleState} />
                 <ul className={
                     clsx(
-                        `bg-gray-300 -mt-[2px] dark:bg-zinc-800 fixed top-20 z-[999] right-0 h-[calc(100vh-80px)] flex-col
+                        `bg-gray-300 -mt-[2px] dark:bg-zinc-800 fixed top-20 z-[999] right-0 h-[calc(100vh-78px)] flex-col
                         flex items-center justify-center duration-500 transition-all gap-5 mdlg:static mdlg:flex-row mdlg:w-full mdlg:h-auto
                         mdlg:mt-0 mdlg:!bg-transparent mdlg:duration-300`, 
                         State ? "w-[180px]" : "w-0"
